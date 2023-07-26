@@ -1,5 +1,5 @@
 # david.qa
-answers to your website questions
+answers to your creative website questions
 
 # status
 [![Netlify Status](https://api.netlify.com/api/v1/badges/928a263a-3e20-435d-a043-b8d129e86422/deploy-status)](https://app.netlify.com/sites/davidqa/deploys)

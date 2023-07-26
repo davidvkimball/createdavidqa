@@ -6,6 +6,7 @@ a{margin:0;padding:0;text-decoration:none;outline:none;font-size:100%;vertical-a
 a img{border-style:none}
 ul,li{list-style-type:none}
 .cf:before,.cf:after{content:" ";display:table}.cf:after{clear:both}
+:root {--icon-color: #000;}
 
 /* ===================================
 Background, Text, Link Settings
@@ -83,7 +84,7 @@ display:inline-block; /* Side-by-side */
 position:relative; /* Determines submenu display position */
 height:2em;line-height:2em; /* Menu height */
 }
-nav li a,nav li span{
+nav li a, nav li span{
 color:#000;
 display:inline-block;
 margin:0 5px
@@ -91,6 +92,7 @@ margin:0 5px
 nav > ul > li + li:before{
 content:"│"
 }
+
 /*  Submenu
 ------------------------------ */
 .sub-menu{
@@ -210,8 +212,8 @@ height:1px
 }
 .marker{
 background:#25f4f4;
-background:-webkit-linear-gradient(rgba(37,244,244,0) 60%, #25f4f4 0%);
-background:linear-gradient(rgba(37,244,244,0) 60%, #25f4f4 0%);
+/* background:-webkit-linear-gradient(rgba(37,244,244,0) 60%, #25f4f4 0%);
+background:linear-gradient(rgba(37,244,244,0) 60%, #25f4f4 0%); */
 padding:0 2px
 }
 .dcline{
@@ -267,6 +269,10 @@ margin-top: 0;
 margin-top: 10px;
   }
 
+#content ul li:last-child {
+  margin-bottom: 10px;
+    }
+
 /*  Images are pixelated by default
 ------------------------------ */
 
@@ -277,38 +283,111 @@ image-rendering: pixelated;
 image-rendering: -webkit-optimize-contrast;
   }
 
+  /*  Cursor is default for submenus
+------------------------------ */
+
+.cf {
+cursor: default;
+  }
+
 /*  Light/Dark theme toggle
 ------------------------------ */
 
 .theme-switcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+position: absolute;
+top: 10px;
+right: 10px;
+  }
+
+#theme-toggle {
+cursor: pointer;
+  }
+
+/* Default light theme */
+
+body {
+background-color: #fff;
+color: #000;
   }
   
-  #theme-toggle {
-    cursor: pointer;
+/* Dark theme */
+
+body.dark header {
+background-color: #1a1a21;
+border: 1px solid #fff;
+color: #fff;
+  }
+
+body.dark #menu {
+background-color: #1a1a21;
+border: 1px solid #fff;
+color: #fff;
+  }
+
+body.dark .cf {
+color: #fff;
   }
   
-  /* Default light theme */
-  
-  body {
-    background-color: #fff;
-    color: #000;
+body.dark {
+background-color: #292d3a;
+background-image: none;
+color: #fff;
   }
-  
-  /* Dark theme */
-  
-  body.dark {
-    background-color: #333;
-    color: #fff;
+
+body.dark #content {
+background-color: #1a1a21;
+border: 1px solid #fff;
+color: #fff;
   }
-  
-  /* Toggle icon */ 
-  
-  body.dark #theme-toggle {
-    content: url('banner31.gif'); 
+
+  body.dark #content a{
+    color:#2befee
+    }
+
+body.dark a {
+color: #fff;
   }
+
+body.dark nav li a,
+body.dark nav li span {
+color: #fff;
+  }
+
+body.dark em {
+  background: #484848;
+  }
+
+body.dark .marker {
+background: #117676;
+  }
+
+body.dark .sub-menu{
+background:rgba(255, 255, 255, 0.8);
+  }
+body.dark .sub-menu li a{
+color:#000;
+  }
+body.dark .sub-menu li a:hover{
+background:rgba(255, 255, 255, 0.5)
+  }
+body.dark h2{
+border-bottom:1px solid #fff;
+}
+body.dark h3{
+background:url(images/icon01-dark.gif) no-repeat 0 50%;
+border-bottom: 1px dashed #fff;
+  }
+
+/* Mobile menu icon */
+body.dark {
+  --icon-color: #fff;
+}
+  
+/* Toggle icon */ 
+  
+body.dark #theme-toggle {
+  content: url('images/dark.gif'); 
+}
 
 
 /* ===================================
@@ -330,7 +409,7 @@ h1{
 padding-right:50px;
 min-height:40px
 }
-/* 画像の縮小表示 */
+/* Reduced size of images */
 img{
 height:auto;
 max-width:100%
@@ -345,16 +424,16 @@ Menu for smartphones and tablets
 /*  Slide
 ------------------------------ */
 #menu{
-background:rgba(0,0,0,.9); /* 背景色 */
+background:rgba(0,0,0,.9); /* Background color */
 display:none;
 margin:0;padding:0;
-position:absolute; /* 表示位置固定 */
+position:absolute; /* Fixed display position */
 left:0;
 z-index:20
 }
 nav li{
-display:block; /* 横並び解除 */
-height:auto;line-height:inherit /* 高さリセット */
+display:block; /* Cancel side-by-side arrangement */
+height:auto;line-height:inherit /* Reset height */
 }
 nav > ul > li+li:before{
 content:""
@@ -366,7 +445,7 @@ nav li a,nav li span{
 color:#fff;
 display:block;
 margin:0;
-padding:10px 20px; /* リンクの余白 一列の高さはここで調節 */
+padding:10px 20px; /* Adjust the margin of the link, the height of each row is adjusted here */
 position:relative
 }
 nav li a:hover,.sub-menu li a:hover,nav li span:hover{
@@ -378,13 +457,13 @@ color:#fff
 .sub-menu{
 background:rgba(255,255,255,.1);
 border-top:1px dashed #666;
-display:none; /* 隠す */
+display:none; /* Hide */
 position:static;
 width:100%;
 z-index:auto
 }
 .sub-menu li{
-display:inline-block;/* Delete this if you want to do it for each row */
+display:inline-block; /* Delete this if you want to do it for each row */
 height:auto; /* Height reset */
 width:50%; /* Delete this if you want to do it for each row */
 visibility:visible; /* Reset */
@@ -428,7 +507,7 @@ position:absolute;
 height:40px;width:40px;/* Size */
 top:10px;right:10px/* Position relative to header */
 }
-#open-icon,#open-icon:before,#open-icon:after{background:#000} /* Line color */
+#open-icon,#open-icon:before,#open-icon:after{background: var(--icon-color)} /* Line color */
 #open-icon{display:block;margin:-1px 0 0 -10px;position:absolute;top:50%;left:50%;height:2px;width:20px}
 #open-icon:before,#open-icon:after{content:"";display:block;position:absolute;top:50%;left:0;height:2px;width:20px;transition:.3s}
 #open-icon:before{margin-top:-8px}

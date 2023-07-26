@@ -1,0 +1,17 @@
+# Redirects are listed here.
+https://davidqa.netlify.app/* https://davidqa.com/:splat 301!
+
+/blog                    https://blog.davidvkimball.com
+/social                  https://davidvkimball.com/#social
+/profiles                https://davidvkimball.com/#social
+/privacy-policy          https://davidvkimball.com//#terms-policy
+/subscribe#privacypolicy https://davidvkimball.com//#terms-policy
+/subscribe               https://blog.davidvkimball.com/newsletter
+/contact                 https://davidvkimball.com//#contact
+/gamertag                https://davidvkimball.com//#social
+/pc                      https://kit.co/davidvkimball
+/book                    https://www.amazon.com/dp/B010RZVYM0
+/discord                 https://discord.gg/gyrNHAwHK8
+/merch                   https://merch.streamelements.com/davidvkimball
+/vods                    https://youtube.com/davidvVODS
+/cal                     https://calendly.com/davidvkimball/30min

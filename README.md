@@ -1,7 +1,7 @@
 # david.qa
-make stuff on the web
+answers to your website questions
 
 # roadmap
-- minimalist responsive theme
-- homepage with options for old web and new web
-- links to cool resources that help you make stuff
+1. minimalist responsive theme
+2. homepage with options for old web and new web
+3. links to cool resources that help you make stuff

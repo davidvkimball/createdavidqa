@@ -1,0 +1,463 @@
+html,body,div,span,iframe,h1,h2,h3,h4,p,pre,del,em,img,b,i,dl,dt,dd,ol,ul,li,form,table,tbody,tr,th,td,article,aside,footer,header,nav,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;box-sizing:border-box}
+article,aside,footer,header,nav,section{display:block}
+body{line-height:1;overflow-wrap:break-word;word-wrap:break-word}
+input,textarea,select{font-family:inherit;font-size:inherit;color:inherit;vertical-align:middle;box-sizing:border-box}
+a{margin:0;padding:0;text-decoration:none;outline:none;font-size:100%;vertical-align:baseline;background:transparent}
+a img{border-style:none}
+ul,li{list-style-type:none}
+.cf:before,.cf:after{content:" ";display:table}.cf:after{clear:both}
+
+/* ===================================
+Background, Text, Link Settings
+=================================== */
+
+html{
+font-size:62.5%
+}
+body{
+background:url(images/back01.gif) #fff;
+color:#000;
+font-family:'Segoe UI','游ゴシック Medium','Yu Gothic Medium','游ゴシック体',YuGothic,'Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif;
+font-size:1.1em;
+line-height:1.5;
+margin:20px
+}
+/*  Links
+------------------------------ */
+a{
+color:#000
+}
+a:hover{
+color:#999;
+text-decoration:underline
+}
+#content a{
+color:#21b3b2
+}
+
+/* ===================================
+Basic
+=================================== */
+
+#wrapper{
+margin:0 auto;
+width:440px /* Change the overall width and size here */
+}
+header{
+background:#fff;
+border:1px solid #000;
+border-radius:3px;
+margin-bottom:10px
+}
+.header-inner{
+position:relative;
+padding:10px
+}
+#content{
+background:#fff;
+border:1px solid #000;
+border-radius:3px;
+margin-bottom:10px;
+padding:5px 10px 10px
+}
+footer{
+padding:0 0 5px;
+text-align:center
+}
+
+/* ===================================
+Menu
+=================================== */
+
+#menu{
+background:#fff;
+border:1px solid #000;
+border-radius:3px;
+color:#ccc;
+margin-bottom:10px;
+padding:5px 10px;
+width:100%
+}
+nav li{
+display:inline-block; /* Side-by-side */
+position:relative; /* Determines submenu display position */
+height:2em;line-height:2em; /* Menu height */
+}
+nav li a,nav li span{
+color:#000;
+display:inline-block;
+margin:0 5px
+}
+nav > ul > li + li:before{
+content:"│"
+}
+/*  Submenu
+------------------------------ */
+.sub-menu{
+background:rgba(0,0,0,.8);
+position:absolute;
+width:180px; /* Submenu width */
+z-index:20
+}
+.sub-menu li{
+display:block; /* Reset horizontal */
+height:0; /* Hide */
+width:100%;
+visibility:hidden; /* Hide */
+overflow:hidden /* Hide */
+}
+.sub-menu li a{
+color:#fff;
+display:block;
+margin:0;
+padding:0 5px
+}
+.sub-menu li a:hover{
+background:rgba(0,0,0,.5)
+}
+nav li:hover .sub-menu li{
+height:2em;line-height:2em; /* Submenu Height */
+visibility:visible;
+overflow:visible;
+transition: .5s
+}
+/*  Hide button to open menu
+------------------------------ */
+#open{display:none}
+
+/* ===================================
+Link to the top of the page, copyright notice
+=================================== */
+
+/*  Position is set by scroll.js
+------------------------------ */
+#pagetop{
+background:rgba(0,0,0,.8);/* 背景 */
+color:#fff;/* 色 */
+border-radius:5px;
+display:block;
+padding:10px;
+position:fixed;
+text-align:center;
+z-index:10
+}
+#pagetop:hover{
+background:rgba(0,0,0,.5)
+}
+#fl a{
+display:inline-block;
+margin:10px 0
+}
+
+/* ===================================
+headings, borders, lines
+=================================== */
+
+h1{
+font-size:1.4em;
+line-height:1;
+margin-bottom:10px
+}
+h2{
+border-bottom:1px solid #000;
+font-size:1.1em;
+margin:20px 0
+}
+h2.question:first-letter{
+font-size:1.5em;
+margin-right:.1em
+} 
+h3{
+background:url(images/icon01.gif) no-repeat 0 50%;
+border-bottom:1px dashed #000;
+font-size:1em;
+font-weight:400;
+margin:20px 0;
+padding-left:13px
+}
+dt{
+clear:both;
+font-weight:700;
+float:left;
+margin:0 0 5px;
+width:160px
+}
+dd{
+border-bottom:1px solid #ccc;
+margin:0 0 5px 160px
+}
+em{
+background:#ccc;
+font-weight:700
+}
+input,textarea{
+background:#fff;
+border:1px solid #000;
+color:#999;
+margin:3px 0;
+width:200px
+}
+textarea{
+height:50px
+}
+hr{
+border:0;
+border-top:1px solid #ccc;
+display:block;
+margin:1em 0;
+padding:0;
+height:1px
+}
+.marker{
+background:#25f4f4;
+background:-webkit-linear-gradient(rgba(37,244,244,0) 60%, #25f4f4 0%);
+background:linear-gradient(rgba(37,244,244,0) 60%, #25f4f4 0%);
+padding:0 2px
+}
+.dcline{
+border-left:4px solid #000;
+margin:5px 0;
+padding:3px
+}
+.textbox{
+border:1px solid #000;
+border-radius:3px;
+text-align:center
+}
+.title{
+color:#ccc;
+font-size:1.5em;
+font-weight:700;
+margin:2em 0;
+text-align:right
+}
+.txt{
+border-left:1px solid #666;
+margin:1em;
+padding:0 0 0 1em
+}
+.frame{
+background:#fff;
+border-radius:3px;
+padding:6px;
+box-shadow:4px 4px 5px #999
+}
+.line{
+background:url(images/line01.gif) repeat 0 0;
+line-height:11px;height:11px
+}
+
+/* ===================================
+Custom CSS
+=================================== */
+
+/*  Bullet points in unordered
+------------------------------ */
+#content ul {
+    padding-left: 20px;
+  } 
+  
+#content li {
+list-style-type: disc;
+margin-bottom: 5px;
+margin-top: 0; 
+  }
+
+#content li:first-child {
+margin-top: 10px;
+  }
+
+/*  Images are pixelated by default
+------------------------------ */
+
+img {
+image-rendering: auto;
+image-rendering: crisp-edges;
+image-rendering: pixelated;
+image-rendering: -webkit-optimize-contrast;
+  }
+
+/*  Light/Dark theme toggle
+------------------------------ */
+
+.theme-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  #theme-toggle {
+    cursor: pointer;
+  }
+  
+  /* Default light theme */
+  
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* Dark theme */
+  
+  body.dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Toggle icon */ 
+  
+  body.dark #theme-toggle {
+    content: url('banner31.gif'); 
+  }
+
+
+/* ===================================
+For Smartphones and Tablets
+Switches at 480px width
+=================================== */
+
+@media screen and (max-width: 480px){
+body{
+font-size:1.4em;
+margin:10px
+}
+#wrapper{
+padding:0;
+position:relative;
+width:100%
+}
+h1{
+padding-right:50px;
+min-height:40px
+}
+/* 画像の縮小表示 */
+img{
+height:auto;
+max-width:100%
+}
+dt{float:none;clear:none;width:auto}
+dd{margin-left:20px}
+
+/* ===================================
+Menu for smartphones and tablets
+=================================== */
+
+/*  Slide
+------------------------------ */
+#menu{
+background:rgba(0,0,0,.9); /* 背景色 */
+display:none;
+margin:0;padding:0;
+position:absolute; /* 表示位置固定 */
+left:0;
+z-index:20
+}
+nav li{
+display:block; /* 横並び解除 */
+height:auto;line-height:inherit /* 高さリセット */
+}
+nav > ul > li+li:before{
+content:""
+}
+nav > ul > li+li{
+border-top:1px solid #666
+}
+nav li a,nav li span{
+color:#fff;
+display:block;
+margin:0;
+padding:10px 20px; /* リンクの余白 一列の高さはここで調節 */
+position:relative
+}
+nav li a:hover,.sub-menu li a:hover,nav li span:hover{
+background:rgba(0,0,0,.6);
+color:#fff
+}
+/*  Submenu
+------------------------------ */
+.sub-menu{
+background:rgba(255,255,255,.1);
+border-top:1px dashed #666;
+display:none; /* 隠す */
+position:static;
+width:100%;
+z-index:auto
+}
+.sub-menu li{
+display:inline-block;/* Delete this if you want to do it for each row */
+height:auto; /* Height reset */
+width:50%; /* Delete this if you want to do it for each row */
+visibility:visible; /* Reset */
+overflow:visible /* Reset */
+}
+.sub-menu li a{
+padding:10px 20px /* Margins for links - adjust row height here */
+}
+.sub-menu li a:after{
+display:none
+}
+nav li:hover .sub-menu li{
+height:auto;line-height:inherit /* Height reset */
+}
+/*  In the menu
+------------------------------ */
+nav li span:after{
+border-top:3px solid #fff; /* Color */
+border-right:3px solid #fff; /* Color */
+content:"";
+display:block;
+margin-top:-5px;
+position:absolute;
+top:50%;right:20px;
+height:5px;width:5px;
+-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+transform:rotate(45deg);
+transition:.2s
+}
+nav li span.open:after{
+-ms-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+transform:rotate(135deg)
+}
+/*  Button to open menu
+------------------------------ */
+#open{
+display:inline-block;
+position:absolute;
+height:40px;width:40px;/* Size */
+top:10px;right:10px/* Position relative to header */
+}
+#open-icon,#open-icon:before,#open-icon:after{background:#000} /* Line color */
+#open-icon{display:block;margin:-1px 0 0 -10px;position:absolute;top:50%;left:50%;height:2px;width:20px}
+#open-icon:before,#open-icon:after{content:"";display:block;position:absolute;top:50%;left:0;height:2px;width:20px;transition:.3s}
+#open-icon:before{margin-top:-8px}
+#open-icon:after{margin-top:6px}
+#open .close{background:transparent}
+#open .close:before,#open .close:after{margin-top:0}
+#open .close:before{-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+#open .close:after{-ms-transform:rotate(-135deg);-webkit-transform:rotate(-135deg);transform:rotate(-135deg)}
+
+}
+
+/* ===================================
+Custom CSS for smartphones and tablets
+=================================== */
+
+/*  Theme switcher on mobile
+------------------------------ */
+
+@media (max-width: 480px) {
+
+    .header-inner {
+      position: relative; 
+    }
+  
+    .theme-switcher {
+      position: absolute;
+      top: 10px;
+      left: auto;
+      right: 50px; 
+    }
+  
+  }

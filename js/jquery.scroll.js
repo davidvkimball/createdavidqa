@@ -1,8 +1,8 @@
 $(function () {
 
-// ページ上部へ戻る
+// Send to top of page
   var pagetop = $('#pagetop');
-// ボタンの初期位置
+// Initial button position
   var position = {bottom: '-80px',right: '20px'}
   pagetop.css(position);
   $(window).scroll(function () {
@@ -13,7 +13,7 @@ $(function () {
     }
   });
   
-// スムーススクロール
+//  Smooth scroll
   $('a[href^=#]').click(function () {
     var speed = 500;
     var href = $(this).attr("href");

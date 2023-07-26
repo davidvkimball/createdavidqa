@@ -18,7 +18,7 @@ font-size:62.5%
 body{
 background:url(images/back01.gif) #fff;
 color:#000;
-font-family:'Segoe UI','游ゴシック Medium','Yu Gothic Medium','游ゴシック体',YuGothic,'Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif;
+font-family:'Segoe UI','Yu Gothic Medium',YuGothic,'Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
 font-size:1.1em;
 line-height:1.5;
 margin:20px
@@ -134,8 +134,8 @@ Link to the top of the page, copyright notice
 /*  Position is set by scroll.js
 ------------------------------ */
 #pagetop{
-background:rgba(0,0,0,.8);/* 背景 */
-color:#fff;/* 色 */
+background:rgba(0,0,0,.8);/* Background */
+color:#fff;/* Color */
 border-radius:5px;
 display:block;
 padding:10px;
@@ -389,6 +389,11 @@ body.dark #theme-toggle {
   content: url('images/dark.gif'); 
 }
 
+/* Text Area Text */ 
+textarea {
+  color:#000;
+  background-color: #fff;
+}
 
 /* ===================================
 For Smartphones and Tablets

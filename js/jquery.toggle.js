@@ -1,6 +1,6 @@
 $(function() {
 
-// アコーディオンメニュー
+// Accordion menu
   $('nav > ul > li,nav > ul > li > a[href^=#]').on('click', function() {
     (window.innerWidth ? window.innerWidth : $(window).width()) <= 480 && (
     $(this).children('ul:not(:animated)').slideToggle(),
@@ -13,13 +13,13 @@ $(function() {
     event.stopPropagation();
   });
  
-// 小画面時にメニュー内リンクを押した場合、一度閉じる
-// ページ内リンク用
+// When a link within the menu is clicked during small screen display, it closes once
+// For in-page links
   $('nav a').on('click', function() {
     (window.innerWidth ? window.innerWidth : $(window).width()) <= 480 && $('#open').click()
   });
 
-// 小画面時にメニューを閉じてからリサイズするとメニューが表示されないのを防ぐ
+// To prevent the menu from not being displayed when resizing after closing the menu in small screen display.
   $(window).resize(function() {
     var menu = $('#menu'),
         sub = $('.sub-menu'),
@@ -28,7 +28,7 @@ $(function() {
       w > 480 && sub.is(':hidden') && sub.attr('style', '')
   });
 
-// メニューを開くボタンの動作
+// The behavior of the open menu button
   $('#open').click(function() {
     $('#menu').slideToggle(300);
     $('#open-icon').toggleClass('close');

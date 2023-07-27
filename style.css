@@ -13,7 +13,7 @@ Background, Text, Link Settings
 =================================== */
 
 html{
-font-size:62.5%
+font-size:100%
 }
 body{
 background:url(images/back01.gif) #fff;
@@ -42,7 +42,7 @@ Basic
 
 #wrapper{
 margin:0 auto;
-width:440px /* Change the overall width and size here */
+width:580px /* Change the overall width and size here */
 }
 header{
 background:#fff;
@@ -52,17 +52,16 @@ margin-bottom:10px
 }
 .header-inner{
 position:relative;
-padding:10px
+padding:20px
 }
 #content{
 background:#fff;
 border:1px solid #000;
-border-radius:3px;
-margin-bottom:10px;
-padding:5px 10px 10px
+border-radius:6px;
+padding:10px 20px 20px
 }
 footer{
-padding:0 0 5px;
+padding:0 0 10px;
 text-align:center
 }
 
@@ -73,10 +72,10 @@ Menu
 #menu{
 background:#fff;
 border:1px solid #000;
-border-radius:3px;
+border-radius:6px;
 color:#ccc;
 margin-bottom:10px;
-padding:5px 10px;
+padding:10px 20px;
 width:100%
 }
 nav li{
@@ -112,7 +111,7 @@ overflow:hidden /* Hide */
 color:#fff;
 display:block;
 margin:0;
-padding:0 5px
+padding:0 10px
 }
 .sub-menu li a:hover{
 background:rgba(0,0,0,.5)
@@ -138,7 +137,7 @@ background:rgba(0,0,0,.8);/* Background */
 color:#fff;/* Color */
 border-radius:5px;
 display:block;
-padding:10px;
+padding:20px;
 position:fixed;
 text-align:center;
 z-index:10
@@ -148,7 +147,7 @@ background:rgba(0,0,0,.5)
 }
 #fl a{
 display:inline-block;
-margin:10px 0
+margin:20px 0
 }
 
 /* ===================================
@@ -175,18 +174,18 @@ border-bottom:1px dashed #000;
 font-size:1em;
 font-weight:400;
 margin:20px 0;
-padding-left:13px
+padding-left:18px
 }
 dt{
 clear:both;
-font-weight:700;
+font-weight:600;
 float:left;
-margin:0 0 5px;
-width:160px
+margin:0 0 10px;
+width:180px
 }
 dd{
 border-bottom:1px solid #ccc;
-margin:0 0 5px 160px
+margin:0 0 20px 180px
 }
 em{
 background:#ccc;
@@ -196,7 +195,7 @@ input,textarea{
 background:#fff;
 border:1px solid #000;
 color:#999;
-margin:3px 0;
+margin:6px 0;
 width:200px
 }
 textarea{
@@ -218,16 +217,16 @@ padding:0 2px
 }
 .dcline{
 border-left:4px solid #000;
-margin:5px 0;
-padding:3px
+margin:10px 0;
+padding:6px
 }
 .textbox{
 border:1px solid #000;
-border-radius:3px;
+border-radius:6px;
 text-align:center
 }
 .title{
-color:#ccc;
+color:#555555;
 font-size:1.5em;
 font-weight:700;
 margin:2em 0;
@@ -240,8 +239,8 @@ padding:0 0 0 1em
 }
 .frame{
 background:#fff;
-border-radius:3px;
-padding:6px;
+border-radius:6px;
+padding:12px;
 box-shadow:4px 4px 5px #999
 }
 .line{
@@ -261,16 +260,16 @@ Custom CSS
   
 #content li {
 list-style-type: disc;
-margin-bottom: 5px;
+margin-bottom: 10px;
 margin-top: 0; 
   }
 
 #content li:first-child {
-margin-top: 10px;
+margin-top: 20px;
   }
 
 #content ul li:last-child {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
     }
 
 /*  Images are pixelated by default
@@ -283,11 +282,27 @@ image-rendering: pixelated;
 image-rendering: -webkit-optimize-contrast;
   }
 
-  /*  Cursor is default for submenus
+/*  Cursor is default for submenus
 ------------------------------ */
 
 .cf {
 cursor: default;
+  }
+
+/*  Custom bullets for blog post list
+------------------------------ */
+ul#post-list {
+  list-style: none;
+}
+
+ul#post-list > li {
+  list-style-type: none;
+}
+  
+  #post-list #blog-post:before {
+    content: "\21FE";  /* Unicode for black square */
+    display: inline-block;
+    margin-right: 10px;  /* Spacing after the bullet */
   }
 
 /*  Light/Dark theme toggle
@@ -340,9 +355,9 @@ border: 1px solid #fff;
 color: #fff;
   }
 
-  body.dark #content a{
-    color:#2befee
-    }
+body.dark #content a{
+color:#2befee
+  }
 
 body.dark a {
 color: #fff;
@@ -378,6 +393,10 @@ background:url(images/icon01-dark.gif) no-repeat 0 50%;
 border-bottom: 1px dashed #fff;
   }
 
+body.dark .title{
+color:#ccc;
+  }
+
 /* Mobile menu icon */
 body.dark {
   --icon-color: #fff;
@@ -403,7 +422,7 @@ Switches at 480px width
 @media screen and (max-width: 480px){
 body{
 font-size:1.4em;
-margin:10px
+margin:20px
 }
 #wrapper{
 padding:0;

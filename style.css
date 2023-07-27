@@ -36,6 +36,10 @@ text-decoration:underline
 color:#21b3b2
 }
 
+p {
+  margin-bottom: 1em;
+}
+
 /* ===================================
 Basic
 =================================== */
@@ -155,23 +159,23 @@ headings, borders, lines
 =================================== */
 
 h1{
-font-size:1.4em;
+font-size:1.5em;
 line-height:1;
 margin-bottom:10px
 }
 h2{
 border-bottom:1px solid #000;
-font-size:1.1em;
+font-size:1.2em;
 margin:20px 0
 }
 h2.question:first-letter{
-font-size:1.5em;
+font-size:1.2em;
 margin-right:.1em
 } 
 h3{
-background:url(images/icon01.gif) no-repeat 0 50%;
+background:url(images/icon01.gif) no-repeat 0 65%;
 border-bottom:1px dashed #000;
-font-size:1em;
+font-size:1.1em;
 font-weight:400;
 margin:20px 0;
 padding-left:18px
@@ -179,13 +183,15 @@ padding-left:18px
 dt{
 clear:both;
 font-weight:600;
+font-size: 90%;
 float:left;
 margin:0 0 10px;
-width:180px
+width:300px
 }
 dd{
 border-bottom:1px solid #ccc;
-margin:0 0 20px 180px
+font-size: 90%;
+margin:0 0 10px 300px
 }
 em{
 background:#ccc;
@@ -227,7 +233,7 @@ text-align:center
 }
 .title{
 color:#555555;
-font-size:1.5em;
+font-size:1.2em;
 font-weight:700;
 margin:2em 0;
 text-align:right
@@ -389,7 +395,7 @@ body.dark h2{
 border-bottom:1px solid #fff;
 }
 body.dark h3{
-background:url(images/icon01-dark.gif) no-repeat 0 50%;
+background:url(images/icon01-dark.gif) no-repeat 0 65%;
 border-bottom: 1px dashed #fff;
   }
 

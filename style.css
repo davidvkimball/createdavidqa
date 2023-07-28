@@ -205,6 +205,7 @@ margin:6px 0;
 width:200px
 }
 textarea{
+font-family: "Courier New", Courier, monospace;
 height:50px
 }
 hr{
@@ -418,7 +419,35 @@ body.dark #theme-toggle {
 textarea {
   color:#000;
   background-color: #fff;
+  font-size: 12px;
 }
+
+/* Text Area Text Full Width */ 
+.full-width-code textarea {
+  width: 100%;
+  height: 80px;
+}
+
+/* Inline Styling for Code/Markup */ 
+.inline-markup {
+  font-family: "Courier New", Courier, monospace;
+  background: #ccc;
+}
+
+body.dark .inline-markup {
+  background: #484848;
+  }
+
+/* Changelog spacing and size is different */ 
+.changelog dt{
+width:120px;
+font-size: 16px;
+   }
+
+.changelog dd{
+margin:0 0 10px 120px;
+font-size: 16px;
+   }
 
 /* ===================================
 For Smartphones and Tablets
@@ -572,7 +601,18 @@ Custom CSS for smartphones and tablets
     #pagetop{
       display:none;
       }
-  
-  }
 
- 
+/*  Changelogs stack on top of each other on mobile   */
+.changelog dt {
+float: none;
+width: 100%;
+margin: 0 0 10px;
+}  
+
+.changelog dd {
+border-bottom: 1px solid #ccc;
+font-size: 90%;
+margin: 0 0 10px;
+padding-left: 0;
+  }
+}

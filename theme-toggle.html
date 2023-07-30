@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="darkreader-lock">
+<link rel="icon" href="https://david.qa/images/icon-sun.gif">
+<title>theme toggle • david.qa</title>
+<meta name="description" content="get a dark/light theme toggle for your site">
+<meta name="author" content="David V. Kimball">
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F49NPPR47D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F49NPPR47D');
+</script>
+
+<!-- OpenGraph -->
+<meta property="og:title" content="theme toggle • david.qa">
+<meta property="og:description" content="get a dark/light theme toggle for your site">
+<meta property="og:image" content="https://david.qa/images/opengraph.png">
+<meta property="og:image:alt" content="3 boxes total, two boxes are Q+A-styled questions in light mode box, grayed out, and one box in dark mode with the brand name and tagline. Content: Q: What's a link? An item that points to another location. david.qa - answers to your creative website questions. Q: What's a website? A set of related web pages located under a single domain name.">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:url" content="https://david.qa" />
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@davidvkimball">
+
+</head>
+<body>
+<!-- Body -->
+<div id="wrapper">
+
+<!-- Header -->
+<header>
+<div class="header-inner">
+<!-- Site Name -->
+<h1><a href="/">david.qa</a></h1>
+answers to your creative website questions
+  <div class="theme-switcher">
+    <img src="https://david.qa/images/light.gif" id="theme-toggle"> 
+  </div>
+</div>
+</header><!-- End of Header -->
+
+<!-- Menu -->
+<div id="open"><span id="open-icon"></span></div>
+
+<div id="menu">
+<nav class="cf">
+<ul>
+
+<li><a href="/">home</a>
+<li><a href="/resources">resources</a>
+<li><a href="/blog">blog</a>
+<li><a href="/about">about</a>
+
+</ul>
+</nav>
+</div><!-- End of Menu -->
+
+<!-- Main -->
+<div id="content">
+
+<h2>Dark / light mode toggle</h2>
+
+<p>Get a theme toggle for your website, like the one on this site.</p>
+<b>Toggle Button HTML</b> (place wherever you want on your site): <br>
+<span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">&lt;!-- Dark/Light Theme Toggle Button --&gt;
+&lt;div class="theme-switcher"&gt;
+  &lt;img src="images/light.gif" id="theme-toggle"&gt; 
+&lt;/div&gt;</textarea></span>
+<h3>What's happening here?</h3>
+<p>You're adding a button to your website users can click to toggle the dark/light theme styles we'll be defining with CSS soon. You can use any image you like, but if you want to use this out-of-the-box, create a folder called "images" and save these two images with their current names, <span class="inline-markup">light.gif</span> and <span class="inline-markup">dark.gif</span>.</p>
+<p>Save these images to your images folder:</p>
+<p><img src="images/light.gif"> <img src="images/dark.gif"></p>
+
+<b>Toggle Button and Dark Theme CSS</b> (add to your stylesheet file): <br>
+<span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">/*  Light/Dark theme toggle
+  ------------------------------ */
+  
+  /* Toggle button and icon */
+  
+  .theme-switcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+    }
+  
+  #theme-toggle {
+  cursor: pointer;
+    }
+  
+  body.dark #theme-toggle {
+  content: url('images/dark.gif'); 
+    }
+  
+  /* Default light theme */
+  
+  body {
+  background-color: #fff;
+  color: #000;
+    }
+    
+  /* Dark theme */
+  
+  body.dark header {
+  background-color: #1a1a21;
+  border: 1px solid #fff;
+  color: #fff;
+    }
+  
+  body.dark {
+  background-color: #292d3a;
+  color: #fff;
+    }
+  
+  body.dark #content {
+  background-color: #1a1a21;
+  border: 1px solid #fff;
+  color: #fff;
+    }
+  
+  body.dark a {
+  color: #fff;
+    }
+  
+  body.dark nav li a,
+  body.dark nav li span {
+  color: #fff;
+    }</textarea></span>
+
+<h3>What's happening here?</h3>
+<p>You're positioning the button to go in the top right corner and telling it to swap it's image when clicked. You're also defining your dark mode styles here, assuming your current theme is light by default.</p>
+
+<b>Toggle function JavaScript</b> (create or add to a .js file): <br>
+<span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">// Get system preference
+  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const systemPrefersDark = darkModeMediaQuery.matches;
+  
+  // Get stored preference
+  const storedPref = sessionStorage.getItem('theme');
+  
+  // Default to system pref
+  let currentTheme = systemPrefersDark ? 'dark' : 'light';
+  
+  // If stored pref, use that
+  if (storedPref) {
+    currentTheme = storedPref;
+  }
+  
+  // Set initial theme
+  setTheme();
+  
+  // Listen for system pref changes
+  darkModeMediaQuery.addEventListener('change', e => {
+    if (!storedPref) {
+      // If no stored pref, follow system pref
+      currentTheme = e.matches ? 'dark' : 'light'; 
+      setTheme();
+    } 
+  });
+  
+  // Toggle button
+  const toggle = document.getElementById('theme-toggle');
+  
+  toggle.addEventListener('click', () => {
+    // Switch theme
+    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    // Store preference
+    sessionStorage.setItem('theme', currentTheme);
+    
+    // Set theme
+    setTheme();
+  });
+  
+  function setTheme() {
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }
+  </textarea></span>
+
+<h3>What's happening here?</h3>
+<p><b>Lots!</b> First, this checks the user's system preference for dark or light theme (if any), stores that preference, and then displays it first. 
+This only gets overridden if the user clicks the toggle, which then persists throughout the session across whatever other pages have this JavaScript running.
+Each time a page is loaded, it will check the storage if there's an existing preference set, and then display that version.</p>
+
+<h3>Changelog</h3>
+<dl class="changelog">
+<dt>2023.07.28</dt>
+<dd>Initial submission. Want to do more testing.</dd>
+</dl>
+
+</div><!-- End of Main -->
+
+<!-- Footer -->
+<footer>
+<div id="fl">©2023 <a href="http://davidvkimball.com" target="_blank">David V. Kimball</a> • <a href="/about#credits">credits</a></div>
+</footer><!-- End of Footer -->
+
+</div><!-- End of Body -->
+
+<!-- Top of Page -->
+<a href="#" id="pagetop">▲top</a>
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/jquery.toggle.js"></script>
+<script src="js/jquery.scroll.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

@@ -118,7 +118,7 @@ content: url('https://david.qa/images/dark.gif');
 </textarea></span>
 
 <h3>What's happening here?</h3>
-<p>You're positioning the button to go in the top right corner and telling it to swap it's image when clicked.</p>
+<p>You're positioning the button to go in the top right corner of your page and giving it the class we'll use to swap its image when clicked.</p>
 <p>Remember to replace <span class="inline-markup">https://david.qa/images/dark.gif</span> with the URL location of your versions of the images!</p>
 <b>Dark Theme Styles CSS</b> (add to your stylesheet file): <br>
 <span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">
@@ -234,6 +234,7 @@ background-image: var(--header-image-dark);
 This only gets overridden if the user clicks the toggle, which then persists throughout the session across whatever other pages have this JavaScript running.
 Each time a page is loaded, it will check the storage if there's an existing preference set, and then display that version.</p>
 <p>Remember to replace <span class="inline-markup">https://david.qa/images/dark.gif</span> and <span class="inline-markup">https://david.qa/images/light.gif</span> with the URL location of your versions of the images!</p>
+<p>As a bonus, this will even store a log of which theme you're in, so you can view it in your browser's developer tools (under the "Console" tab).</p>
 <hr>
 <p>If you end up using this theme toggle, <a href="/about#link">credit is appreciated</a> (but not required)!</p>
 

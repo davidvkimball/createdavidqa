@@ -463,6 +463,12 @@ margin:0 0 10px 120px;
 font-size: 16px;
    }
 
+.flexible-btns {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /* ===================================
 For Smartphones and Tablets
 Switches at 480px width
@@ -629,4 +635,16 @@ font-size: 90%;
 margin: 0 0 10px;
 padding-left: 0;
   }
+
+/*  Stack side-by-side buttons on top of each other   */
+.flexible-btns {
+  text-align: center;
+  display: block;
+  justify-content: center;
+}
+
+.flexible-btns img {
+  padding-bottom: 5px;
+}
+
 }

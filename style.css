@@ -289,18 +289,21 @@ margin-top: 20px;
   margin-bottom: 20px;
     }
 
-/*  Images are pixelated by default
+/*  Images should never exceed 100% width.
 ------------------------------ */
 
 img {
-image-rendering: crisp-edges;
-image-rendering: pixelated;
-image-rendering: -webkit-optimize-contrast;
 max-width: 100%;
   }
 
 .auto-render {
   image-rendering: auto;
+}
+
+.pixelated {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 /*  Cursor is default for submenus

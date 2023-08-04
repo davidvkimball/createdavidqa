@@ -71,11 +71,93 @@ answers to your creative website questions
 <!-- Main -->
 <div id="content">
 
-<h2>Under Construction</h2>
-<p>This page is still being worked on and isn't quite ready to share yet.</p>
+<h2>Neocities Tutorial</h2>
+<p>This is the simplest way to get started making a Neocities site.</p>
 
-<h3>Until Then...</h3>
-<p>Check out the <a href="/">homepage</a>!</p>
+<h3>Step 1: Creating the Basic Structure</h3>
+<p>Let's start with a barebones HTML structure:</p>
+<div class="code">
+<code>&lt;!DOCTYPE html&gt;<br>
+  &lt;html lang="en"&gt;<br>
+  &nbsp;&lt;head&gt;<br>
+  &nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+  &nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+  &nbsp;&nbsp;&nbsp;&lt;title&gt;My Shiny New Website&lt;/title&gt;<br>
+  &nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="style.css"&gt;<br>
+  &nbsp;&lt;/head&gt;<br>
+  &nbsp;&lt;body&gt;<br>
+  &nbsp;&nbsp;&nbsp;&lt;p&gt;This is where content goes.&lt;/p&gt;<br>
+  &nbsp;&lt;/body&gt;<br>
+  &lt;/html&gt;<br></code>
+</div><br>
+<p>Copy this, and visit your <a href="https://neocities.org/dashboard" target="_blank">Neocities dashboard</a>. Paste it over what you find on your <span class="inline-markup">index.html</span> file by selecting Edit.</p>
+<p>If you're curious about the contents of the default template, <a href="https://thewikion.neocities.org/wiki/default_website" target="_blank">this page</a> explains quite a bit about it.</p>
+<p><a href="https://thewikion.neocities.org/wiki/default_website" target="_blank"><img src="images/default-site-screenshot.png"></a></p>
+<p>After you replace the default markup, your page will look exactly like <a href="https://davidqa.neocities.org/structure" target="_blank">this</a>.</p>
+<p><a href="https://davidqa.neocities.org/structure" target="_blank"><img src="images/structure-page-screenshot.png"></a></p>
+<p><a href="https://davidqa.neocities.org/structure" target="_blank"><img src="images/example-website-button.gif"></a></p>
+<p>Yes, your page looks quite barren at the moment. <strong>That's OK!</strong> In the very next step we'll be adding your layout.</p>
+
+<h3>Step 2: Selecting Your Layout</h3>
+<p>Use this <a href="https://sadgrl.online/projects/layout-builder/" target="_blank">layout builder</a> by Sadness and select the layout you want, using the options provided.</p>
+<p><a href="https://sadgrl.online/projects/layout-builder/" target="_blank"><img src="images/layout-builder-screenshot.png"></a></p>
+<p>Make sure you adjust all of the extra options, and then click "Generate Layout."</p>
+<p><img src="images/extra-options-screenshot.png"></p>
+<p>Now your layout has been generated!</p>
+<p><img src="images/layout-generated-screenshot.png"></p>
+<p>You'll copy that generated markup and paste it within the <span class="inline-markup">&lt;body&gt;</span> section of your site structure.</p>
+<p><img src="images/copy-and-paste-layout.gif"></p>
+<p>Once you click save, and then view, you'll see your new layout live on your site! Here's <a href="https://davidqa.neocities.org/layout" target="_blank">an example</a> of what you might see:</p>
+<p><a href="https://davidqa.neocities.org/layout" target="_blank"><img src="images/example-website-button.gif"></a></p>
+<p><a href="https://davidqa.neocities.org/layout" target="_blank"><img src="images/default-layout-screenshot.png"></a></p>
+
+<h3>Step 3: Customizing Your Layout</h3>
+<p>Here's where things get spicy.</p>
+<p>Let's change 3 things on this website:</p>
+<ol>
+  <li>Change the background image to an animated green image</li>
+  <li>Add a flaming logo to the top</li>
+  <li>Change the color of the heading text to white</li>
+</ol>
+<p>To start, right click and save these images. You'll upload both of them to your <a href="https://neocities.org/dashboard" target="_blank">Neocities dashboard</a> (you can delete them later).</p>
+<p><img src="images/green-bg.gif" alt="Animated green tiled background image."> <img src="images/cool-logo.gif" width="200px" alt="A very cool fiery logo."></p>
+<p>Assuming you retained the filenames, make the following adjustment to your markup and replace the background image:</p>
+<p>Use CTRL+F and find <span class="inline-markup">https://sadhost.neocities.org/images/tiles/purplesky.gif</span> and replace it with <span class="inline-markup">green-bg.gif</span>.</p>
+<p><img src="images/change-background.gif"></p>
+<p>If you save and view your webpage, you'll find the background is different. <strong>Congrats!</strong> You've made your first website customization.</p>
+<p>Next, we'll try something a little fancier. We'll add a horizontally and vertically centered logo to the top.</p>
+<p>First, find this:</p>
+<div class="code">
+<code>
+  &lt;div id="header"&gt;&lt;/div&gt;
+</code>
+</div><br>
+<p>Once you do, replace it with this:</p>
+<div class="code">
+<code>
+  &lt;div style="display: flex;justify-content: center;align-items: center;" id="header"&gt;<br>
+  &lt;img src="cool-logo.gif"&gt;&lt;/div&gt;
+</code>
+</div><br>
+<p><img src="images/add-logo.gif"></p>
+<p>Finally, find this block of CSS:</p>
+<div class="code">
+  <code>
+    h1,<br>
+            h2,<br>
+            h3 {<br>
+                color: #ED64F5;<br>
+            }
+  </code>
+</div><br>
+<p>All you're going to do is change <span class="inline-markup">#ED64F5</span> to <span class="inline-markup">#fff</span>. FFF = the hex value of white.</p>
+<p><img src="images/change-color.gif"></p>
+<p>Now check out <a href="https://davidqa.neocities.org/customize" target="_blank">the result</a>:</p>
+<p><a href="https://davidqa.neocities.org/customize" target="_blank"><img src="images/example-website-button.gif"></a></p>
+<p><a href="https://davidqa.neocities.org/customize" target="_blank"><img src="images/customize-screenshot.png"></a></p>
+<p>If this isn't the aesthetic you're going for, no problem! Now you know how to make changes.</p>
+<p>Don't stop here, a world of personalizing is ahead of you.</p>
+<p class="flexible-btns"><a href="/personalizing-neocities"><img onmouseover="this.src='https://david.qa/images/start-personalizing-button.png';" onmouseout="this.src='https://david.qa/images/start-personalizing-button.png';" src="https://david.qa/images/start-personalizing-button.png.png"></a></p>
 
 </div><!-- End of Main -->
 

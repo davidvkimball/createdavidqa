@@ -439,6 +439,24 @@ textarea {
   font-size: 12px;
 }
 
+/* Code Blocks */ 
+code {
+  font-size: smaller;
+  color: #2ae6e6;
+}
+
+.code {
+  background: #000;
+  border: 1px solid #000;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+body.dark .code {
+  border: 1px solid #fff;
+}
+
 /* Text Area Text Full Width */ 
 .full-width-code textarea {
   width: 100%;

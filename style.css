@@ -1,671 +1,853 @@
-html,body,div,span,iframe,h1,h2,h3,h4,p,pre,del,em,img,b,i,dl,dt,dd,ul,form,table,tbody,tr,th,td,article,aside,footer,header,nav,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;box-sizing:border-box}
-article,aside,footer,header,nav,section{display:block}
-body{line-height:1;overflow-wrap:break-word;word-wrap:break-word}
-input,textarea,select{font-family:inherit;font-size:inherit;color:inherit;vertical-align:middle;box-sizing:border-box}
-a{margin:0;padding:0;text-decoration:none;outline:none;font-size:100%;vertical-align:baseline;background:transparent}
-a img{border-style:none}
-ul li{list-style-type:none}
-.cf:before,.cf:after{content:" ";display:table}.cf:after{clear:both}
-:root {--icon-color: #000;}
+html,body,div,span,iframe,h1,h2,h3,h4,p,pre,del,em,img,b,i,dl,dt,dd,ul,form,table,tbody,tr,th,td,article,aside,footer,header,nav,section {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  box-sizing:border-box
+}
 
-/* ===================================
-Background, Text, Link Settings
-=================================== */
+article,aside,footer,header,nav,section {
+  display:block
+}
 
-html{
-font-size:100%
+body {
+  line-height:1;
+  overflow-wrap:break-word;
+  word-wrap:break-word
 }
-body{
-background:url(images/back01.gif) #fff;
-color:#000;
-font-family:'Segoe UI','Yu Gothic Medium',YuGothic,'Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
-font-size:1.1em;
-line-height:1.5;
-margin:20px
+
+input,textarea,select {
+  font-family:inherit;
+  font-size:inherit;
+  color:inherit;
+  vertical-align:middle;
+  box-sizing:border-box
 }
-/*  Links
------------------------------- */
-a{
-color:#000
+
+a {
+  margin:0;
+  padding:0;
+  text-decoration:none;
+  outline:none;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent
 }
-a:hover{
-color:#999;
-text-decoration:underline
+
+a img {
+  border-style:none
 }
-#content a{
-color:#21b3b2
+
+ul li {
+  list-style-type:none
+}
+
+.cf:before,.cf:after {
+  content:" ";
+  display:table
+}
+
+.cf:after {
+  clear:both
+}
+
+:root {
+  --icon-color: #000;
+}
+
+/* =================================== Background, Text, Link Settings =================================== */
+
+html {
+   font-size:100% 
+}
+
+body {
+   background:url(images/back01.gif) #fff;
+   color:#000;
+   font-family:'Segoe UI','Yu Gothic Medium',YuGothic,'Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
+   font-size:1.1em;
+   line-height:1.5;
+   margin:20px 
+}
+
+/* Links ------------------------------ */
+
+a {
+   color:#000 
+}
+
+a:hover {
+   color:#999;
+   text-decoration:underline 
+}
+
+#content a {
+   color:#21b3b2 
 }
 
 p {
-  margin-bottom: 1em;
+   margin-bottom: 1em;
 }
 
-/* ===================================
-Basic
-=================================== */
-
-#wrapper{
-margin:0 auto;
-width:580px /* Change the overall width and size here */
-}
-header{
-background:#fff;
-border:1px solid #000;
-border-radius:3px;
-margin-bottom:10px
-}
-.header-inner{
-position:relative;
-padding:20px
-}
-#content{
-background:#fff;
-border:1px solid #000;
-border-radius:6px;
-padding:10px 20px 20px
-}
-footer{
-padding:0 0 10px;
-text-align:center
+/* =================================== Basic =================================== */
+#wrapper {
+   margin:0 auto;
+   width:580px 
+  /* Change the overall width and size here */
 }
 
-/* ===================================
-Menu
-=================================== */
-
-#menu{
-background:#fff;
-border:1px solid #000;
-border-radius:6px;
-color:#ccc;
-margin-bottom:10px;
-padding:10px 20px;
-width:100%
-}
-nav li{
-display:inline-block; /* Side-by-side */
-position:relative; /* Determines submenu display position */
-height:2em;line-height:2em; /* Menu height */
-}
-nav li a, nav li span{
-color:#000;
-display:inline-block;
-margin:0 5px
-}
-nav > ul > li + li:before{
-content:"│"
+header {
+   background:#fff;
+   border:1px solid #000;
+   border-radius:3px;
+   margin-bottom:10px 
 }
 
-/*  Submenu
------------------------------- */
-.sub-menu{
-background:rgba(0,0,0,.8);
-position:absolute;
-width:180px; /* Submenu width */
-z-index:20
-}
-.sub-menu li{
-display:block; /* Reset horizontal */
-height:0; /* Hide */
-width:100%;
-visibility:hidden; /* Hide */
-overflow:hidden /* Hide */
-}
-.sub-menu li a{
-color:#fff;
-display:block;
-margin:0;
-padding:0 10px
-}
-.sub-menu li a:hover{
-background:rgba(0,0,0,.5)
-}
-nav li:hover .sub-menu li{
-height:2em;line-height:2em; /* Submenu Height */
-visibility:visible;
-overflow:visible;
-transition: .5s
-}
-/*  Hide button to open menu
------------------------------- */
-#open{display:none}
-
-/* ===================================
-Link to the top of the page, copyright notice
-=================================== */
-
-/*  Position is set by scroll.js
------------------------------- */
-#pagetop{
-background:rgba(0,0,0,.8);/* Background */
-color:#fff;/* Color */
-border-radius:5px;
-display:block;
-padding:20px;
-position:fixed;
-text-align:center;
-z-index:10
-}
-#pagetop:hover{
-background:rgba(0,0,0,.5)
-}
-#fl a{
-display:inline-block;
-margin:20px 0
+.header-inner {
+   position:relative;
+   padding:20px 
 }
 
-/* ===================================
-headings, borders, lines
-=================================== */
-
-h1{
-font-size:1.5em;
-line-height:1;
-margin-bottom:10px
-}
-h2{
-border-bottom:1px solid #000;
-font-size:1.2em;
-margin:20px 0
-}
-h2.question:first-letter{
-font-size:1.2em;
-margin-right:.1em
-} 
-h3{
-background:url(images/icon01.gif) no-repeat 0 65%;
-border-bottom:1px dashed #000;
-font-size:1.1em;
-font-weight:400;
-margin:20px 0;
-padding-left:18px
-}
-dt{
-clear:both;
-font-weight:600;
-font-size: 90%;
-float:left;
-margin:0 0 10px;
-width:300px
-}
-dd{
-border-bottom:1px solid #ccc;
-font-size: 90%;
-margin:0 0 10px 300px
-}
-em{
-background:#ccc;
-font-weight:700
-}
-input,textarea{
-background:#fff;
-border:1px solid #000;
-color:#999;
-margin:6px 0;
-width:200px
-}
-textarea{
-font-family: "Courier New", Courier, monospace;
-height:50px
-}
-hr{
-border:0;
-border-top:1px solid #ccc;
-display:block;
-margin:1em 0;
-padding:0;
-height:1px
-}
-.marker{
-background:#25f4f4;
-/* background:-webkit-linear-gradient(rgba(37,244,244,0) 60%, #25f4f4 0%);
-background:linear-gradient(rgba(37,244,244,0) 60%, #25f4f4 0%); */
-padding:0 2px
-}
-.dcline{
-border-left:4px solid #000;
-margin:10px 0;
-padding:6px
-}
-.textbox{
-border:1px solid #000;
-border-radius:6px;
-text-align:center
-}
-.title{
-color:#555555;
-font-size:1.2em;
-font-weight:700;
-margin:2em 0;
-text-align:right
-}
-.txt{
-border-left:1px solid #666;
-margin:1em;
-padding:0 0 0 1em
-}
-.frame{
-background:#fff;
-border-radius:6px;
-padding:12px;
-box-shadow:4px 4px 5px #999
-}
-.line{
-background:url(images/line01.gif) repeat 0 0;
-line-height:11px;height:11px
+#content {
+   background:#fff;
+   border:1px solid #000;
+   border-radius:6px;
+   padding:10px 20px 20px 
 }
 
-/* ===================================
-Custom CSS
-=================================== */
+footer {
+   padding:0 0 10px;
+   text-align:center 
+}
 
-/*  Bullet points in unordered
------------------------------- */
+/* =================================== Menu =================================== */
+
+#menu {
+   background:#fff;
+   border:1px solid #000;
+   border-radius:6px;
+   color:#ccc;
+   margin-bottom:10px;
+   padding:10px 20px;
+   width:100% 
+}
+
+nav li {
+   display:inline-block;
+  /* Side-by-side */
+   position:relative;
+  /* Determines submenu display position */
+   height:2em;
+  line-height:2em;
+  /* Menu height */
+}
+
+nav li a, nav li span {
+   color:#000;
+   display:inline-block;
+   margin:0 5px 
+}
+
+nav > ul > li + li:before {
+   content:"│" 
+}
+
+/* Submenu ------------------------------ */
+
+.sub-menu {
+   background:rgba(0,0,0,.8);
+   position:absolute;
+   width:180px;
+  /* Submenu width */
+   z-index:20 
+}
+
+.sub-menu li {
+   display:block;
+  /* Reset horizontal */
+   height:0;
+  /* Hide */
+   width:100%;
+   visibility:hidden;
+  /* Hide */
+   overflow:hidden 
+  /* Hide */
+}
+
+.sub-menu li a {
+   color:#fff;
+   display:block;
+   margin:0;
+   padding:0 10px 
+}
+
+.sub-menu li a:hover {
+   background:rgba(0,0,0,.5) 
+}
+
+nav li:hover .sub-menu li {
+   height:2em;
+  line-height:2em;
+  /* Submenu Height */
+   visibility:visible;
+   overflow:visible;
+   transition: .5s 
+}
+
+/* Hide button to open menu ------------------------------ */
+#open {
+  display:none
+}
+
+/* =================================== Link to the top of the page, copyright notice =================================== */
+
+/* Position is set by scroll.js ------------------------------ */
+
+#pagetop {
+   background:rgba(0,0,0,.8);
+  /* Background */
+   color:#fff;
+  /* Color */
+   border-radius:5px;
+   display:block;
+   padding:20px;
+   position:fixed;
+   text-align:center;
+   z-index:10 
+}
+
+#pagetop:hover {
+   background:rgba(0,0,0,.5) 
+}
+
+#fl a {
+   display:inline-block;
+   margin:20px 0 
+}
+
+/* =================================== headings, borders, lines =================================== */
+
+h1 {
+   font-size:1.5em;
+   line-height:1;
+   margin-bottom:10px 
+}
+
+h2 {
+   border-bottom:1px solid #000;
+   font-size:1.2em;
+   margin:20px 0 
+}
+
+h2.question:first-letter {
+   font-size:1.2em;
+   margin-right:.1em 
+}
+
+h3 {
+   background:url(images/icon01.gif) no-repeat 0 65%;
+   border-bottom:1px dashed #000;
+   font-size:1.1em;
+   font-weight:400;
+   margin:20px 0;
+   padding-left:18px 
+}
+
+dt {
+   clear:both;
+   font-weight:600;
+   font-size: 90%;
+   float:left;
+   margin:0 0 10px;
+   width:300px 
+}
+
+dd {
+   border-bottom:1px solid #ccc;
+   font-size: 90%;
+   margin:0 0 10px 300px 
+}
+
+em {
+   background:#ccc;
+   font-weight:700 
+}
+
+input,textarea {
+   background:#fff;
+   border:1px solid #000;
+   color:#999;
+   margin:6px 0;
+   width:200px 
+}
+
+textarea {
+   font-family: "Courier New", Courier, monospace;
+   height:50px 
+}
+
+hr {
+   border:0;
+   border-top:1px solid #ccc;
+   display:block;
+   margin:1em 0;
+   padding:0;
+   height:1px 
+}
+
+.marker {
+   background:#25f4f4;
+  /* background:-webkit-linear-gradient(rgba(37,244,244,0) 60%, #25f4f4 0%);
+   background:linear-gradient(rgba(37,244,244,0) 60%, #25f4f4 0%);
+   */
+   padding:0 2px 
+}
+
+.dcline {
+   border-left:4px solid #000;
+   margin:10px 0;
+   padding:6px 
+}
+
+.textbox {
+   border:1px solid #000;
+   border-radius:6px;
+   text-align:center 
+}
+
+.title {
+   color:#555555;
+   font-size:1.2em;
+   font-weight:700;
+   margin:2em 0;
+   text-align:right 
+}
+
+.txt {
+   border-left:1px solid #666;
+   margin:1em;
+   padding:0 0 0 1em 
+}
+
+.frame {
+   background:#fff;
+   border-radius:6px;
+   padding:12px;
+   box-shadow:4px 4px 5px #999 
+}
+
+.line {
+   background:url(images/line01.gif) repeat 0 0;
+   line-height:11px;
+  height:11px 
+}
+
+/* =================================== Custom CSS =================================== */
+
+/* Bullet points in unordered ------------------------------ */
+
 #content ul {
-    padding-left: 20px;
-  } 
-  
+   padding-left: 20px;
+}
+
 #content ul li {
-list-style-type: disc;
-margin-bottom: 10px;
-margin-top: 0; 
-  }
+   list-style-type: disc;
+   margin-bottom: 10px;
+   margin-top: 0;
+}
 
 #content ol {
-  padding-left: 30px;
-} 
+   padding-left: 30px;
+}
 
 #content ol li {
-margin-bottom: 10px;
-padding-left: 5px;
-margin-top: 0; 
-    }
+   margin-bottom: 10px;
+   padding-left: 5px;
+   margin-top: 0;
+}
 
 #content li:first-child {
-margin-top: 20px;
-  }
+   margin-top: 20px;
+}
 
 #content ul:last-child {
-  margin-bottom: 20px;
-    }
+   margin-bottom: 20px;
+}
 
-/*  Images should never exceed 100% width.
------------------------------- */
+/* Images should never exceed 100% width. ------------------------------ */
 
 img {
-max-width: 100%;
-  }
+   max-width: 100%;
+}
 
 .auto-render {
-  image-rendering: auto;
+   image-rendering: auto;
 }
 
 .pixelated {
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  image-rendering: -webkit-optimize-contrast;
+   image-rendering: crisp-edges;
+   image-rendering: pixelated;
+   image-rendering: -webkit-optimize-contrast;
 }
 
-/*  Cursor is default for submenus
------------------------------- */
+/* Cursor is default for submenus ------------------------------ */
 
 .cf {
-cursor: default;
-  }
+   cursor: default;
+}
 
-/*  Custom bullets for blog post list
------------------------------- */
+/* Custom bullets for blog post list ------------------------------ */
+
 ul #post-list {
-  list-style: none;
+   list-style: none;
 }
 
 ul #post-list > li {
-  list-style-type: none;
+   list-style-type: none;
 }
-  
-  #post-list #blog-post:before {
-    content: "\21FE";  /* Unicode for black square */
-    display: inline-block;
-    margin-right: 10px;  /* Spacing after the bullet */
-  }
 
-/*  Light/Dark theme toggle
------------------------------- */
+#post-list #blog-post:before {
+   content: "\21FE";
+  /* Unicode for black square */
+   display: inline-block;
+   margin-right: 10px;
+  /* Spacing after the bullet */
+}
+
+/* Light/Dark theme toggle ------------------------------ */
 
 .theme-switcher {
-position: absolute;
-top: 10px;
-right: 10px;
-  }
+   position: absolute;
+   top: 10px;
+   right: 10px;
+}
 
 #theme-toggle {
-cursor: pointer;
-  }
+   cursor: pointer;
+}
 
 /* Default light theme */
 
 body {
-background-color: #fff;
-color: #000;
-  }
-  
+   background-color: #fff;
+   color: #000;
+}
+
 /* Dark theme */
 
 body.dark header {
-background-color: #1a1a21;
-border: 1px solid #fff;
-color: #fff;
-  }
+   background-color: #1a1a21;
+   border: 1px solid #fff;
+   color: #fff;
+}
 
 body.dark #menu {
-background-color: #1a1a21;
-border: 1px solid #fff;
-color: #fff;
-  }
+   background-color: #1a1a21;
+   border: 1px solid #fff;
+   color: #fff;
+}
 
 body.dark .cf {
-color: #fff;
-  }
-  
+   color: #fff;
+}
+
 body.dark {
-background-color: #292d3a;
-background-image: none;
-color: #fff;
-  }
+   background-color: #292d3a;
+   background-image: none;
+   color: #fff;
+}
 
 body.dark #content {
-background-color: #1a1a21;
-border: 1px solid #fff;
-color: #fff;
-  }
+   background-color: #1a1a21;
+   border: 1px solid #fff;
+   color: #fff;
+}
 
-body.dark #content a{
-color:#2befee
-  }
+body.dark #content a {
+   color:#2befee 
+}
 
 body.dark a {
-color: #fff;
-  }
+   color: #fff;
+}
 
-body.dark nav li a,
-body.dark nav li span {
-color: #fff;
-  }
+body.dark nav li a, body.dark nav li span {
+   color: #fff;
+}
 
 body.dark em {
-  background: #484848;
-  }
+   background: #484848;
+}
 
 body.dark .marker {
-background: #117676;
-  }
-
-body.dark .sub-menu{
-background:rgba(255, 255, 255, 0.8);
-  }
-body.dark .sub-menu li a{
-color:#000;
-  }
-body.dark .sub-menu li a:hover{
-background:rgba(255, 255, 255, 0.5)
-  }
-body.dark h2{
-border-bottom:1px solid #fff;
+   background: #117676;
 }
-body.dark h3{
-background:url(images/icon01-dark.gif) no-repeat 0 65%;
-border-bottom: 1px dashed #fff;
-  }
 
-body.dark .title{
-color:#ccc;
-  }
+body.dark .sub-menu {
+   background:rgba(255, 255, 255, 0.8);
+}
+
+body.dark .sub-menu li a {
+   color:#000;
+}
+
+body.dark .sub-menu li a:hover {
+   background:rgba(255, 255, 255, 0.5) 
+}
+
+body.dark h2 {
+   border-bottom:1px solid #fff;
+}
+
+body.dark h3 {
+   background:url(images/icon01-dark.gif) no-repeat 0 65%;
+   border-bottom: 1px dashed #fff;
+}
+
+body.dark .title {
+   color:#ccc;
+}
 
 /* Mobile menu icon */
+
 body.dark {
-  --icon-color: #fff;
+   --icon-color: #fff;
 }
-  
-/* Toggle icon */ 
-  
+
+/* Toggle icon */
+
 body.dark #theme-toggle {
-  content: url('images/dark.gif'); 
+   content: url('images/dark.gif');
 }
 
-/* Text Area Text */ 
+/* Text Area Text */
+
 textarea {
-  color:#000;
-  background-color: #fff;
-  font-size: 12px;
+   color:#000;
+   background-color: #fff;
+   font-size: 12px;
 }
 
-/* Code Blocks */ 
+/* Code Blocks */
 code {
-  font-size: smaller;
-  color: #2ae6e6;
+   font-size: smaller;
+   color: #2ae6e6;
 }
 
 .code {
-  background: #000;
-  border: 1px solid #000;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
+   background: #000;
+   border: 1px solid #000;
+   border: none;
+   border-radius: 10px;
+   padding: 10px;
 }
 
 body.dark .code {
-  border: 1px solid #fff;
+   border: 1px solid #fff;
 }
 
-/* Text Area Text Full Width */ 
+/* Text Area Text Full Width */
+
 .full-width-code textarea {
-  width: 100%;
-  height: 80px;
+   width: 100%;
+   height: 80px;
 }
 
-/* Inline Styling for Code/Markup */ 
+/* Inline Styling for Code/Markup */
+
 .inline-markup {
-  font-family: "Courier New", Courier, monospace;
-  background: #ccc;
+   font-family: "Courier New", Courier, monospace;
+   background: #ccc;
 }
 
 body.dark .inline-markup {
-  background: #484848;
-  }
-
-/* Changelog spacing and size is different */ 
-.changelog dt{
-width:120px;
-font-size: 16px;
-   }
-
-.changelog dd{
-margin:0 0 10px 120px;
-font-size: 16px;
-   }
-
-.flexible-btns {
-  text-align: center;
-  display: flex;
-  justify-content: space-evenly;
+   background: #484848;
 }
 
-/* ===================================
-For Smartphones and Tablets
-Switches at 480px width
-=================================== */
+/* Changelog spacing and size is different */
 
-@media screen and (max-width: 620px){
-body{
-font-size:1.4em;
-margin:20px
-}
-#wrapper{
-padding:0;
-position:relative;
-width:100%
-}
-h1{
-padding-right:50px;
-min-height:40px
-}
-/* Reduced size of images */
-img{
-height:auto;
-max-width:100%
-}
-dt{float:none;clear:none;width:auto}
-dd{margin-left:20px}
-
-/* ===================================
-Menu for smartphones and tablets
-=================================== */
-
-/*  Slide
------------------------------- */
-#menu{
-background:rgba(0,0,0,.9); /* Background color */
-display:none;
-margin:0;padding:0;
-position:absolute; /* Fixed display position */
-left:0;
-z-index:20
-}
-nav li{
-display:block; /* Cancel side-by-side arrangement */
-height:auto;line-height:inherit /* Reset height */
-}
-nav > ul > li+li:before{
-content:""
-}
-nav > ul > li+li{
-border-top:1px solid #666
-}
-nav li a,nav li span{
-color:#fff;
-display:block;
-margin:0;
-padding:10px 20px; /* Adjust the margin of the link, the height of each row is adjusted here */
-position:relative
-}
-nav li a:hover,.sub-menu li a:hover,nav li span:hover{
-background:rgba(0,0,0,.6);
-color:#fff
-}
-/*  Submenu
------------------------------- */
-.sub-menu{
-background:rgba(255,255,255,.1);
-border-top:1px dashed #666;
-display:none; /* Hide */
-position:static;
-width:100%;
-z-index:auto
-}
-.sub-menu li{
-display:inline-block; /* Delete this if you want to do it for each row */
-height:auto; /* Height reset */
-width:50%; /* Delete this if you want to do it for each row */
-visibility:visible; /* Reset */
-overflow:visible /* Reset */
-}
-.sub-menu li a{
-padding:10px 20px /* Margins for links - adjust row height here */
-}
-.sub-menu li a:after{
-display:none
-}
-nav li:hover .sub-menu li{
-height:auto;line-height:inherit /* Height reset */
-}
-/*  In the menu
------------------------------- */
-nav li span:after{
-border-top:3px solid #fff; /* Color */
-border-right:3px solid #fff; /* Color */
-content:"";
-display:block;
-margin-top:-5px;
-position:absolute;
-top:50%;right:20px;
-height:5px;width:5px;
--ms-transform:rotate(45deg);
--webkit-transform:rotate(45deg);
-transform:rotate(45deg);
-transition:.2s
-}
-nav li span.open:after{
--ms-transform:rotate(135deg);
--webkit-transform:rotate(135deg);
-transform:rotate(135deg)
-}
-/*  Button to open menu
------------------------------- */
-#open{
-display:inline-block;
-position:absolute;
-height:40px;width:40px;/* Size */
-top:10px;right:10px/* Position relative to header */
-}
-#open-icon,#open-icon:before,#open-icon:after{background: var(--icon-color)} /* Line color */
-#open-icon{display:block;margin:-1px 0 0 -10px;position:absolute;top:50%;left:50%;height:2px;width:20px}
-#open-icon:before,#open-icon:after{content:"";display:block;position:absolute;top:50%;left:0;height:2px;width:20px;transition:.3s}
-#open-icon:before{margin-top:-8px}
-#open-icon:after{margin-top:6px}
-#open .close{background:transparent}
-#open .close:before,#open .close:after{margin-top:0}
-#open .close:before{-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
-#open .close:after{-ms-transform:rotate(-135deg);-webkit-transform:rotate(-135deg);transform:rotate(-135deg)}
-
-}
-
-/* ===================================
-Custom CSS for smartphones and tablets
-=================================== */
-
-/*  Theme switcher on mobile + hide top button
------------------------------- */
-
-@media (max-width: 620px) {
-
-    .header-inner {
-      position: relative; 
-    }
-  
-    .theme-switcher {
-      position: absolute;
-      top: 10px;
-      left: auto;
-      right: 50px; 
-    }
-
-    #pagetop{
-      display:none;
-      }
-
-/*  Changelogs stack on top of each other on mobile   */
 .changelog dt {
-float: none;
-width: 100%;
-margin: 0 0 10px;
-}  
+   width:120px;
+   font-size: 16px;
+}
 
 .changelog dd {
-border-bottom: 1px solid #ccc;
-font-size: 90%;
-margin: 0 0 10px;
-padding-left: 0;
+   margin:0 0 10px 120px;
+   font-size: 16px;
+}
+
+.flexible-btns {
+   text-align: center;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+/* =================================== For Smartphones and Tablets Switches at 480px width =================================== */
+
+@media screen and (max-width: 620px) {
+   body{
+       font-size:1.4em;
+       margin:20px 
   }
 
-/*  Stack side-by-side buttons on top of each other   */
-.flexible-btns {
-  text-align: center;
-  display: block;
-  justify-content: center;
+   #wrapper {
+       padding:0;
+       position:relative;
+       width:100% 
+  }
+
+   h1 {
+       padding-right:50px;
+       min-height:40px 
+  }
+
+  /* Reduced size of images */
+
+   img {
+       height:auto;
+       max-width:100% 
+  }
+
+   dt {
+      float:none;
+      clear:none;
+      width:auto
+  }
+
+   dd {
+      margin-left:20px
+  }
+
+  /* =================================== Menu for smartphones and tablets =================================== */
+
+  /* Slide ------------------------------ */
+
+   #menu {
+       background:rgba(0,0,0,.9);
+      /* Background color */
+       display:none;
+       margin:0;
+      padding:0;
+       position:absolute;
+      /* Fixed display position */
+       left:0;
+       z-index:20 
+  }
+
+   nav li {
+       display:block;
+      /* Cancel side-by-side arrangement */
+       height:auto;
+      line-height:inherit 
+      /* Reset height */
+  }
+
+   nav > ul > li+li:before {
+       content:"" 
+  }
+
+   nav > ul > li+li{
+       border-top:1px solid #666 
+  }
+   nav li a,nav li span {
+       color:#fff;
+       display:block;
+       margin:0;
+       padding:10px 20px;
+      /* Adjust the margin of the link, the height of each row is adjusted here */
+       position:relative 
+  }
+
+   nav li a:hover,.sub-menu li a:hover,nav li span:hover {
+       background:rgba(0,0,0,.6);
+       color:#fff 
+  }
+
+  /* Submenu ------------------------------ */
+
+   .sub-menu {
+       background:rgba(255,255,255,.1);
+       border-top:1px dashed #666;
+       display:none;
+      /* Hide */
+       position:static;
+       width:100%;
+       z-index:auto 
+  }
+
+   .sub-menu li {
+       display:inline-block;
+      /* Delete this if you want to do it for each row */
+       height:auto;
+      /* Height reset */
+       width:50%;
+      /* Delete this if you want to do it for each row */
+       visibility:visible;
+      /* Reset */
+       overflow:visible 
+      /* Reset */
+  }
+
+   .sub-menu li a {
+       padding:10px 20px 
+      /* Margins for links - adjust row height here */
+  }
+
+   .sub-menu li a:after {
+       display:none 
+  }
+
+   nav li:hover .sub-menu li {
+       height:auto;
+      line-height:inherit 
+      /* Height reset */
+  }
+
+  /* In the menu ------------------------------ */
+
+   nav li span:after {
+       border-top:3px solid #fff;
+      /* Color */
+       border-right:3px solid #fff;
+      /* Color */
+       content:"";
+       display:block;
+       margin-top:-5px;
+       position:absolute;
+       top:50%;
+      right:20px;
+       height:5px;
+      width:5px;
+       -ms-transform:rotate(45deg);
+       -webkit-transform:rotate(45deg);
+       transform:rotate(45deg);
+       transition:.2s 
+  }
+
+   nav li span.open:after {
+       -ms-transform:rotate(135deg);
+       -webkit-transform:rotate(135deg);
+       transform:rotate(135deg) 
+  }
+
+  /* Button to open menu ------------------------------ */
+
+   #open {
+       display:inline-block;
+       position:absolute;
+       height:40px;
+      width:40px;
+      /* Size */
+       top:10px;
+      right:10px
+      /* Position relative to header */
+  }
+
+   #open-icon,#open-icon:before,#open-icon:after {
+      background: var(--icon-color)
+  }
+
+  /* Line color */
+
+   #open-icon {
+      display:block;
+      margin:-1px 0 0 -10px;
+      position:absolute;
+      top:50%;
+      left:50%;
+      height:2px;
+      width:20px
+  }
+
+   #open-icon:before,#open-icon:after {
+      content:"";
+      display:block;
+      position:absolute;
+      top:50%;
+      left:0;
+      height:2px;
+      width:20px;
+      transition:.3s
+  }
+
+   #open-icon:before {
+      margin-top:-8px
+  }
+
+   #open-icon:after {
+      margin-top:6px
+  }
+
+   #open .close {
+      background:transparent
+  }
+
+   #open .close:before,#open .close:after {
+      margin-top:0
+  }
+
+   #open .close:before {
+      -ms-transform:rotate(-45deg);
+      -webkit-transform:rotate(-45deg);
+      transform:rotate(-45deg)
+  }
+
+   #open .close:after {
+      -ms-transform:rotate(-135deg);
+      -webkit-transform:rotate(-135deg);
+      transform:rotate(-135deg)
+  }
+
 }
 
-.flexible-btns img {
-  padding-bottom: 5px;
-}
+/* =================================== Custom CSS for smartphones and tablets =================================== */
 
+/* Theme switcher on mobile + hide top button ------------------------------ */
+
+@media (max-width: 620px) {
+   .header-inner {
+       position: relative;
+  }
+
+   .theme-switcher {
+       position: absolute;
+       top: 10px;
+       left: auto;
+       right: 50px;
+  }
+
+   #pagetop {
+       display:none;
+  }
+
+  /* Changelogs stack on top of each other on mobile */
+
+   .changelog dt {
+       float: none;
+       width: 100%;
+       margin: 0 0 10px;
+  }
+
+   .changelog dd {
+       border-bottom: 1px solid #ccc;
+       font-size: 90%;
+       margin: 0 0 10px;
+       padding-left: 0;
+  }
+
+  /* Stack side-by-side buttons on top of each other */
+
+   .flexible-btns {
+       text-align: center;
+       display: block;
+       justify-content: center;
+  }
+
+   .flexible-btns img {
+       padding-bottom: 5px;
+  }
+  
 }

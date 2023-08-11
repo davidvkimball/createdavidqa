@@ -92,9 +92,13 @@ p {
    margin-bottom: 1em;
 }
 
-.posts h3, li, div {
-   list-style-type:none;
-   margin-bottom:18px;
+.posts h3, .posts li {
+   margin-bottom: 18px;
+ }
+
+ .posts h3, .posts li, .posts div {
+   list-style-type: none;
+   margin-bottom: 18px;
  }
 
 /* =================================== Basic =================================== */

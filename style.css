@@ -92,6 +92,11 @@ p {
    margin-bottom: 1em;
 }
 
+.posts h3, li, div {
+   list-style-type:none;
+   margin-bottom:18px;
+ }
+
 /* =================================== Basic =================================== */
 #wrapper {
    margin:0 auto;
@@ -254,6 +259,18 @@ h3 {
    font-weight:400;
    margin:20px 0;
    padding-left:18px 
+}
+
+h4 {
+   text-transform: uppercase;
+   margin-bottom:10px;
+}
+
+summary {
+   text-transform: uppercase;
+   font-weight: 600;
+   margin-bottom:10px;
+   cursor: pointer;
 }
 
 dt {

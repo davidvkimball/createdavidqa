@@ -9,7 +9,7 @@
 
 const html_templates = {
 
-  "header": "/templates/menu.html",
+  "menu": "/templates/menu.html",
   
   };
   

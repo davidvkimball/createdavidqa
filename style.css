@@ -355,9 +355,9 @@ hr {
 
 .frame {
    background:#fff;
-   border-radius:6px;
+   border-color: #1a1a21;
    padding:12px;
-   box-shadow:4px 4px 5px #999 
+   box-shadow: -4px 4px 5px 0px #999999a1;
 }
 
 .line {
@@ -413,6 +413,19 @@ img {
    image-rendering: pixelated;
    image-rendering: -webkit-optimize-contrast;
 }
+
+/* Some images can be next to text. ------------------------------ */
+
+.text-block {
+   /* Ensures the block clears the float */
+   overflow: auto;
+}
+
+.top-right {
+   float: right;
+   margin-left: 10px; /* Optional: Add some space between the image and text */
+}
+
 
 /* Cursor is default for submenus ------------------------------ */
 

@@ -167,7 +167,7 @@ nav > ul > li + li:before {
 /* Submenu ------------------------------ */
 
 .sub-menu {
-   background:rgba(0,0,0,.8);
+   background:rgba(0,0,0,.95);
    position:absolute;
    width:180px;
   /* Submenu width */
@@ -508,7 +508,7 @@ body.dark .marker {
 }
 
 body.dark .sub-menu {
-   background:rgba(255, 255, 255, 0.8);
+   background:rgba(255, 255, 255, 0.95);
 }
 
 body.dark .sub-menu li a {

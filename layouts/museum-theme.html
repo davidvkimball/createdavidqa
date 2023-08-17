@@ -1,0 +1,229 @@
+<!-- Museum Theme - Layout by David V. Kimball // https://david.qa -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum of Arts</title>
+    <style>
+
+        body, h1, h2, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #efebe9; /* Museum beige */
+            color: #5d4037;  /* Dark brown text */
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-bottom: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #5d4037; /* Dark brown link */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Museum container */
+        .museum-container {
+        border: 2px solid #8d6e63;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex; /* Add this to center the main-content */
+        justify-content: center;
+    }
+
+        /* Art Navigation */
+        .art-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .art-nav a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            line-height: 50px;         /* Adjusted to match height */
+            text-decoration: none;
+        }
+
+        .art-nav a::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #d7ccc8; /* Default color */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
+
+        .art-nav a:hover::before {
+            transform: scale(1.1);
+            text-decoration: none;
+        }
+
+        .art-nav a[data-section="painting"]::before {
+            background: #e57373; /* color for painting */
+        }
+
+        .art-nav a[data-section="sculpture"]::before {
+            background: #81c784; /* color for sculpture */
+        }
+
+        .art-nav a[data-section="photography"]::before {
+            background: #64b5f6; /* color for photography */
+        }
+
+        .art-nav a[data-section="digital-art"]::before {
+            background: #ffb74d; /* color for digital-art */
+        }
+
+        .art-nav a[data-section="pottery"]::before {
+            background: #ba68c8; /* color for pottery */
+        }
+
+        /* Main content */
+        .main-content {
+            width: 100%;
+            padding: 2rem;
+            background-color: #efebe9;
+            box-sizing: border-box;
+            position: relative; /* Set main as the positioning context */
+            min-height: 500px; /* Ensure there's some space even when content is hidden */
+            max-height: calc(100vh - 60px); /* 60px is the height of .art-nav */
+            overflow: auto; /* Allows scrolling within .main-content if needed */
+        }
+
+
+        @media (min-width: 900px) {  /* This breakpoint can be adjusted based on when you want the design to change */
+            .main-content {
+                width: 800px;  /* Set a fixed width for larger screens */
+                min-width: 800px;  /* Ensure it doesn't shrink below this for larger screens */
+            }
+        }        
+
+        .main-content > section {
+            box-sizing: border-box;
+        }
+
+        .main-content > section:not(#home) {
+            padding: 32px 15px; /* Padding for sections, excluding #home */
+        }
+
+        .main-content img {
+            max-width: 100%;
+        }
+
+        /* Default all sections to be hidden */
+        section {
+            background-color: #efebe9; 
+            opacity: 0;
+            visibility: hidden;
+            position: absolute; 
+            top: 0;
+            left: 15px; /* Adjusted to account for main's padding */
+            right: 15px; /* Adjusted to account for main's padding */
+            bottom: 15px; /* Adjusted to account for main's padding */
+            transition: opacity 0.3s, visibility 0.3s;
+            overflow: auto; /* To enable scrolling if content is too long */
+            transition: none;
+        }
+
+        body:target section#home {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Show #home by default. It remains in the flow so it doesn't overlay anything. */
+        section#home {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+        }
+
+        /* Show targeted sections, with a higher z-index to ensure they overlay #home */
+        section:target {
+            opacity: 1;
+            visibility: visible;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="_" style="display: none;"></div>
+    <div class="museum-container">
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section id="home">
+                <h1>Painting</h1>
+                <p>Painting is the practice of applying paint, pigment, color or other medium to a solid surface. The medium is commonly applied to the base with a brush.</p>
+            </section>
+
+            <section id="sculpture">
+                <h1>Sculpture</h1>
+                <p>Sculpture is the branch of the visual arts that operates in three dimensions.</p>
+            </section>
+
+            <section id="photography">
+                <h1>Photography</h1>
+                <p>Photography is the art, application, and practice of creating durable images by recording light, either electronically or chemically.</p>
+            </section>
+
+            <section id="digital-art">
+                <h1>Digital Art</h1>
+                <p>Digital art is an artistic work or practice that uses digital technology as part of the creative or presentation process.</p>
+            </section>
+
+            <section id="pottery">
+                <h1>Pottery</h1>
+                <p>Pottery is the process of forming vessels and other objects with clay and other ceramic materials, which are fired at high temperatures to give them a hard, durable form.</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Art Navigation -->
+    <nav class="art-nav">
+        <a href="#_" data-section="painting">🎨</a> <!-- First item should be #_ -->
+        <a href="#sculpture" data-section="sculpture">🧱</a>
+        <a href="#photography" data-section="photography">📷</a>
+        <a href="#digital-art" data-section="digital-art">💻</a>
+        <a href="#pottery" data-section="pottery">🏺</a>
+    </nav>
+
+</body>
+
+</html>

@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="darkreader-lock">
+<link rel="icon" href="https://david.qa/images/icon-sun.gif">
+<title>layouts • david.qa</title>
+<meta name="description" content="website layouts">
+<meta name="author" content="David V. Kimball">
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<!-- GoatCounter -->
+<script data-goatcounter="https://davidqa.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+<!-- OpenGraph -->
+<meta property="og:title" content="layouts • david.qa">
+<meta property="og:description" content="website layouts">
+<meta property="og:image" content="https://david.qa/images/opengraph.png">
+<meta property="og:image:alt" content="3 boxes total, two boxes are Q+A-styled questions in light mode box, grayed out, and one box in dark mode with the brand name and tagline. Content: Q: What's a link? An item that points to another location. david.qa - answers to your creative website questions. Q: What's a website? A set of related web pages located under a single domain name.">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:url" content="https://david.qa" />
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@davidvkimball">
+
+</head>
+<body>
+<!-- Body -->
+<div id="wrapper">
+
+<!-- Header -->
+<header>
+<div class="header-inner">
+  <!-- Site Name -->
+<h1><a href="/">david.qa</a></h1>
+answers to your creative website questions
+<div class="theme-switcher">
+    <img src="https://david.qa/images/light.gif" alt="Theme Toggle" id="theme-toggle"> 
+  </div>
+</div>
+</header><!-- End of Header -->
+
+<!-- Menu -->
+<div id="open"><span id="open-icon"></span></div>
+
+<div id="menu">
+  <nav class="cf">
+    <ul>
+    
+    <li><a href="/">« Back to home</a>
+    
+    </ul>
+    </nav>
+</div><!-- End of Menu -->
+
+<!-- Main -->
+<div id="content">
+
+<h2>Layouts</h2>
+<div class="text-block">
+<p>Enjoy these layouts made by me! If you use these layouts as-is or as a base, please see my <a href="#terms">terms of use</a>.</p>
+<h3>Websites in a Box</h3>
+<p>Below you'll find what I'm calling "websites in a box" which essentially means you can get a site up with just a single <span class="inline-markup">index.html</span> file!</p>
+<p>These themes are responsive and have multiple "pages" with no JavaScript, inspired by <a href="https://github.com/cadars/john-doe/" target="_blank">John Doe's Page</a>.</p>
+<h4>Beachy Vibes</h4>
+<a href="/layouts/beachy-vibes.html" target="_blank"><img src="images/beachy-vibes-theme.png"></a>
+<a href="/layouts/beachy-vibes.html" target="_blank"><img src="images/example-website-button.gif"></a>
+<span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">&#x3C;!-- Beachy Vibes Theme - Layout by David V. Kimball // https://david.qa --&#x3E;
+
+  &#x3C;!DOCTYPE html&#x3E;
+  &#x3C;html lang=&#x22;en&#x22;&#x3E;
+  
+  &#x3C;head&#x3E;
+      &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+      &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22;&#x3E;
+      &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0&#x22;&#x3E;
+      &#x3C;title&#x3E;Beachy Vibes Theme&#x3C;/title&#x3E;
+      &#x3C;style&#x3E;
+  
+          *, *::before, *::after {
+              box-sizing: border-box;
+          }
+  
+          body, h1, h2, h3, p, ul, li, a {
+              margin: 0;
+              padding: 0;
+              font-family: &#x27;Arial&#x27;, sans-serif;
+          }
+  
+          body {
+              background-color: #AEDFF7; /* Sky blue */
+              color: #023047;  /* Deep ocean blue */
+              font-size: 18px;
+              line-height: 1.6;
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              min-height: 100vh;
+          }
+  
+          main img {
+              max-width: 100%;
+          }
+  
+          a {
+              text-decoration: none;
+              color: #8E9AAF; /* Cloud color */
+          }
+  
+          a:hover {
+              text-decoration: underline;
+          }
+  
+          /* Centering container */
+          .container {
+              max-width: 800px;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+  
+          /* Header */
+          header {
+              background-color: #0466C8; /* Deeper sky blue */
+              color: #ffffff;  /* White for contrast */
+              padding: 15px 0;
+              text-align: center;
+              width: 100%;
+          }
+  
+          /* Navigation */
+          nav {
+              background-color: #AEDFF7; /* Sky blue */
+              padding: 10px;
+              text-align: center;
+              width: 100%;
+          }
+  
+          nav a {
+              color: #292929;
+          }
+  
+          nav ul {
+              list-style: none;
+          }
+  
+          nav ul li {
+              display: inline;
+              margin-right: 20px;
+          }
+  
+          /* Content Wrapper */
+          .content-wrapper {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+          }
+  
+          /* Sidebar */
+          aside {
+              flex-basis: 20%;
+              padding: 15px;
+              background-color: #FFD166; /* Sand color */
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+          }
+  
+          /* Footer */
+          footer {
+              background-color: #0466C8; /* Deeper sky blue */
+              color: #ffffff; /* White */
+              text-align: center;
+              padding: 15px 0;
+              margin-top: 20px;
+              width: 100%;
+          }
+  
+          /* Blog */
+          article {
+              padding-bottom: 1em;
+          }
+          time {
+              font-size: 0.6em;
+          }
+  
+          /* Main content */
+          main {
+              width: 100%;
+              padding: 15px;
+              background-color: #fff; /* White like sea foam */
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+              position: relative; /* Set main as the positioning context */
+              min-height: 400px; /* Ensure there&#x27;s some space even when content is hidden */
+          }
+  
+          main &#x3E; section:not(#home) {
+              padding: 15px 0; /* Padding for sections, excluding #home */
+          }
+  
+  
+          main img, aside img {
+              max-width: 100%;
+          }
+  
+          /* Default all sections to be hidden */
+          section {
+              background-color: #fff; /* Solid white background */
+              opacity: 0;
+              visibility: hidden;
+              position: absolute; 
+              top: 0;
+              left: 15px; /* Adjusted to account for main&#x27;s padding */
+              right: 15px; /* Adjusted to account for main&#x27;s padding */
+              bottom: 15px; /* Adjusted to account for main&#x27;s padding */
+              transition: opacity 0.3s, visibility 0.3s;
+              overflow: auto; /* To enable scrolling if content is too long */
+              transition: none;
+          }
+  
+          body:target section#home {
+              opacity: 0;
+              visibility: hidden;
+          }
+  
+          /* Show #home by default. It remains in the flow so it doesn&#x27;t overlay anything. */
+          section#home {
+              opacity: 1;
+              visibility: visible;
+              position: static;
+          }
+  
+          /* Show targeted sections, with a higher z-index to ensure they overlay #home */
+          section:target {
+              opacity: 1;
+              visibility: visible;
+              z-index: 3;
+          }
+      &#x3C;/style&#x3E;
+  &#x3C;/head&#x3E;
+  
+  &#x3C;body&#x3E;
+      &#x3C;div id=&#x22;_&#x22; style=&#x22;display: none;&#x22;&#x3E;&#x3C;/div&#x3E;
+      &#x3C;!-- Centering Container --&#x3E;
+      &#x3C;div class=&#x22;container&#x22;&#x3E;
+          &#x3C;!-- Header --&#x3E;
+          &#x3C;header&#x3E;
+              &#x3C;h1&#x3E;Beachy Vibes&#x3C;/h1&#x3E;
+          &#x3C;/header&#x3E;
+  
+          &#x3C;!-- Navigation --&#x3E;
+          &#x3C;nav&#x3E;
+              &#x3C;ul&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#_&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E; &#x3C;!-- First item should be #_ --&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#about&#x22;&#x3E;About&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#blog&#x22;&#x3E;Blog&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#contact&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+              &#x3C;/ul&#x3E;
+          &#x3C;/nav&#x3E;
+  
+          &#x3C;!-- Content Wrapper --&#x3E;
+  &#x3C;div class=&#x22;content-wrapper&#x22;&#x3E;
+      &#x3C;!-- Sidebar remains the same --&#x3E;
+  
+              &#x3C;!-- Sidebar --&#x3E;
+              &#x3C;aside&#x3E;
+                  &#x3C;h2&#x3E;Sandy Spots&#x3C;/h2&#x3E;
+                  &#x3C;p&#x3E;Discover the finest grains, unique shells, and hidden treasures.&#x3C;/p&#x3E;
+              &#x3C;/aside&#x3E;
+      &#x3C;!-- Main content --&#x3E;
+      &#x3C;main&#x3E;
+          &#x3C;section id=&#x22;home&#x22;&#x3E;
+              &#x3C;h2&#x3E;Listen to the Waves&#x3C;/h2&#x3E;
+              &#x3C;p&#x3E;Every beach has a story to tell. Let the waves whisper their tales to you.&#x3C;/p&#x3E;
+          &#x3C;/section&#x3E;
+  
+          &#x3C;section id=&#x22;about&#x22;&#x3E;
+              &#x3C;h2&#x3E;About&#x3C;/h2&#x3E;
+              &#x3C;p&#x3E;This is a sentence all about you.&#x3C;/p&#x3E;
+          &#x3C;/section&#x3E;
+  
+          &#x3C;section id=&#x22;blog&#x22;&#x3E;
+              &#x3C;h2&#x3E;Blog&#x3C;/h2&#x3E;
+              &#x3C;article&#x3E;
+                  &#x3C;h3&#x3E;Publishing this site &#x3C;time datetime=&#x22;2004-08-13&#x22;&#x3E;08.13.2004&#x3C;/time&#x3E;&#x3C;/h3&#x3E;
+                  &#x3C;p&#x3E;Just launched! I can&#x27;t wait to share it.&#x3C;/p&#x3E;
+                &#x3C;/article&#x3E;
+  
+                &#x3C;article&#x3E;
+                  &#x3C;h3&#x3E;Updating this site &#x3C;time datetime=&#x22;2004-08-18&#x22;&#x3E;08.18.2004&#x3C;/time&#x3E;&#x3C;/h3&#x3E;
+                  &#x3C;p&#x3E;I&#x27;ve added so much to it since launch!&#x3C;/p&#x3E;
+                &#x3C;/article&#x3E;
+          &#x3C;/section&#x3E;
+          
+  
+          &#x3C;section id=&#x22;contact&#x22;&#x3E;
+              &#x3C;h2&#x3E;Contact&#x3C;/h2&#x3E;
+              &#x3C;p&#x3E;How people can reach you.&#x3C;/p&#x3E;
+          &#x3C;/section&#x3E;
+      &#x3C;/main&#x3E;
+  &#x3C;/div&#x3E;
+  
+          &#x3C;!-- Footer --&#x3E;
+          &#x3C;footer&#x3E;
+              &#x26;copy; 2023 Beachy Vibes
+          &#x3C;/footer&#x3E;
+      &#x3C;/div&#x3E; &#x3C;!-- End of Centering Container --&#x3E;
+  
+  &#x3C;/body&#x3E;
+  &#x3C;/html&#x3E;</textarea></span>
+<br> <br>
+
+<h4>Retro Web</h4>
+<a href="/layouts/retro-web.html" target="_blank"><img src="images/retro-web-theme.png"></a>
+<a href="/layouts/retro-web.html" target="_blank"><img src="images/example-website-button.gif"></a>
+<span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">&#x3C;!-- Retro Web Theme - Layout by David V. Kimball // https://david.qa --&#x3E;
+
+  &#x3C;!DOCTYPE html&#x3E;
+  &#x3C;html lang=&#x22;en&#x22;&#x3E;
+  
+  &#x3C;head&#x3E;
+      &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+      &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22;&#x3E;
+      &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0&#x22;&#x3E;
+      &#x3C;title&#x3E;Retro Web&#x3C;/title&#x3E;
+      &#x3C;style&#x3E;
+  
+          body, h1, h2, p, ul, li, a, header, nav, footer {
+              margin: 0;
+              padding: 0;
+              font-family: &#x27;Courier New&#x27;, Courier, monospace;
+          }
+  
+          body {
+              background-color: #f0e68c; /* khaki */
+              color: #2f4f4f;  /* dark slate gray */
+              font-size: 16px;
+              line-height: 1.6;
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              padding: 20px 0;
+          }
+  
+          a {
+              text-decoration: none;
+              color: #8b4513; /* saddle brown */
+          }
+  
+          a:hover {
+              text-decoration: underline;
+          }
+  
+          /* Centering container */
+          .container {
+              max-width: 800px;
+              width: 100%;
+              border: 2px dashed #2f4f4f; /* dark slate gray */
+              background-color: #f5deb3; /* wheat */
+              padding: 15px;
+          }
+  
+          /* Header */
+          header {
+              color: #2f4f4f; /* dark slate gray */
+              padding: 10px;
+              text-align: center;
+              border-bottom: 2px dashed #2f4f4f; /* dark slate gray */
+          }
+  
+          /* Navigation */
+          nav {
+              margin: 10px 0;
+              text-align: center;
+          }
+  
+          nav ul {
+              list-style: none;
+          }
+  
+          nav ul li {
+              display: inline;
+              margin-right: 20px;
+          }
+  
+          /* Content Wrapper */
+          .content-wrapper {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 15px;
+          }
+  
+          /* Sidebar */
+          aside {
+              flex-basis: 20%;
+              padding: 10px;
+              border-right: 2px dashed #2f4f4f; /* dark slate gray */
+          }
+  
+          /* Footer */
+          footer {
+              margin-top: 20px;
+              text-align: center;
+              padding: 10px;
+              border-top: 2px dashed #2f4f4f; /* dark slate gray */
+          }
+  
+          /* Main content */
+          main {
+              width: 100%;
+              padding: 15px;
+              background-color: #f5deb3; 
+              position: relative; /* Set main as the positioning context */
+              min-height: 400px; /* Ensure there&#x27;s some space even when content is hidden */
+          }
+  
+          main &#x3E; section:not(#home) {
+              padding: 15px 0; /* Padding for sections, excluding #home */
+          }
+  
+  
+          main img, aside img {
+              max-width: 100%;
+          }
+  
+          /* Default all sections to be hidden */
+          section {
+              background-color: #f5deb3; 
+              opacity: 0;
+              visibility: hidden;
+              position: absolute; 
+              top: 0;
+              left: 15px; /* Adjusted to account for main&#x27;s padding */
+              right: 15px; /* Adjusted to account for main&#x27;s padding */
+              bottom: 15px; /* Adjusted to account for main&#x27;s padding */
+              transition: none;
+          }
+  
+          body:target section#home {
+              opacity: 0;
+              visibility: hidden;
+          }
+  
+          /* Show #home by default. It remains in the flow so it doesn&#x27;t overlay anything. */
+          section#home {
+              opacity: 1;
+              visibility: visible;
+              position: static;
+          }
+  
+          /* Show targeted sections, with a higher z-index to ensure they overlay #home */
+          section:target {
+              opacity: 1;
+              visibility: visible;
+              z-index: 3;
+          }
+      &#x3C;/style&#x3E;
+  &#x3C;/head&#x3E;
+  
+  &#x3C;body&#x3E;
+      &#x3C;div id=&#x22;_&#x22; style=&#x22;display: none;&#x22;&#x3E;&#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;container&#x22;&#x3E;
+          &#x3C;!-- Header --&#x3E;
+          &#x3C;header&#x3E;
+              &#x3C;h1&#x3E;Retro Web&#x3C;/h1&#x3E;
+          &#x3C;/header&#x3E;
+  
+          &#x3C;!-- Navigation --&#x3E;
+          &#x3C;nav&#x3E;
+              &#x3C;ul&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#_&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E; &#x3C;!-- First item should be #_ --&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#gallery&#x22;&#x3E;Gallery&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#chat&#x22;&#x3E;Chat&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#contact&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+              &#x3C;/ul&#x3E;
+          &#x3C;/nav&#x3E;
+  
+          &#x3C;!-- Content Wrapper --&#x3E;
+          &#x3C;div class=&#x22;content-wrapper&#x22;&#x3E;
+              &#x3C;!-- Sidebar --&#x3E;
+              &#x3C;aside&#x3E;
+                  &#x3C;h2&#x3E;Notice Board&#x3C;/h2&#x3E;
+                  &#x3C;p&#x3E;Latest updates and retro tips here!&#x3C;/p&#x3E;
+              &#x3C;/aside&#x3E;
+  
+              &#x3C;!-- Main content --&#x3E;
+              &#x3C;main&#x3E;
+                  &#x3C;a id=&#x22;default&#x22;&#x3E;&#x3C;/a&#x3E;
+                  &#x3C;section id=&#x22;home&#x22; class=&#x22;active-section&#x22;&#x3E;
+                      &#x3C;h2&#x3E;Welcome back to the &#x27;90s&#x3C;/h2&#x3E;
+                      &#x3C;p&#x3E;Step back in time and enjoy the nostalgic vibes of the old web.&#x3C;/p&#x3E;
+                  &#x3C;/section&#x3E;
+      
+                  &#x3C;section id=&#x22;gallery&#x22;&#x3E;
+                      &#x3C;h2&#x3E;Gallery&#x3C;/h2&#x3E;
+                      &#x3C;p&#x3E;Display your gallery here.&#x3C;/p&#x3E;
+                  &#x3C;/section&#x3E;
+      
+                  &#x3C;section id=&#x22;chat&#x22;&#x3E;
+                      &#x3C;h2&#x3E;Chat&#x3C;/h2&#x3E;
+                      &#x3C;p&#x3E;Chat with your visitors here.&#x3C;/p&#x3E;
+                  &#x3C;/section&#x3E;
+      
+                  &#x3C;section id=&#x22;contact&#x22;&#x3E;
+                      &#x3C;h2&#x3E;Contact&#x3C;/h2&#x3E;
+                      &#x3C;p&#x3E;How people can reach you.&#x3C;/p&#x3E;
+                  &#x3C;/section&#x3E;
+              &#x3C;/main&#x3E;
+          &#x3C;/div&#x3E;
+  
+          &#x3C;!-- Footer --&#x3E;
+          &#x3C;footer&#x3E;
+              &#x26;copy; 2023 Retro Vibes. All rights reserved.
+          &#x3C;/footer&#x3E;
+      &#x3C;/div&#x3E;
+  &#x3C;/body&#x3E;
+  &#x3C;/html&#x3E;</textarea></span>
+<br> <br>
+
+<h4>Smol Web</h4>
+<a href="/layouts/smol-web.html" target="_blank"><img src="images/smol-web-theme.png"></a>
+<a href="/layouts/smol-web.html" target="_blank"><img src="images/example-website-button.gif"></a>
+<span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">&#x3C;!-- Smol Web Theme - Layout by David V. Kimball // https://david.qa --&#x3E;
+
+  &#x3C;!DOCTYPE html&#x3E;
+  &#x3C;html lang=&#x22;en&#x22;&#x3E;
+  
+  &#x3C;head&#x3E;
+      &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+      &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22;&#x3E;
+      &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0&#x22;&#x3E;
+      &#x3C;title&#x3E;Smol Web Theme&#x3C;/title&#x3E;
+      &#x3C;style&#x3E;
+  
+          body, h1, h2, h3, p, ul, li, a {
+              margin: 0;
+              padding: 0;
+              font-family: &#x27;Courier New&#x27;, Courier, monospace;
+          }
+  
+          body {
+              background-color: #f3f3f3;
+              color: #333;
+              font-size: 18px;
+              line-height: 1.6;
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              min-height: 100vh;
+          }
+  
+          a {
+              text-decoration: none;
+              color: #ff4500;
+          }
+  
+          a:hover {
+              text-decoration: underline;
+          }
+  
+          /* Centering container */
+          .container {
+              max-width: 800px;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+  
+          /* Header */
+          header {
+              background-color: #ff4500;
+              color: #fff;
+              padding: 15px 0;
+              text-align: center;
+              width: 100%;
+          }
+  
+          /* Navigation */
+          nav {
+              background-color: #f3f3f3;
+              padding: 10px;
+              text-align: center;
+              width: 100%;
+          }
+  
+  
+          nav ul {
+              list-style: none;
+          }
+  
+          nav ul li {
+              display: inline;
+              margin-right: 20px;
+          }
+  
+          /* Content Wrapper */
+          .content-wrapper {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+          }
+  
+          /* Sidebar */
+          aside {
+              flex-basis: 20%;
+              padding: 15px;
+              background-color: #e6e6e6;
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+          }
+  
+          /* Footer */
+          footer {
+              background-color: #333;
+              color: #fff;
+              text-align: center;
+              padding: 15px 0;
+              margin-top: 20px;
+              width: 100%;
+          }
+  
+          
+          /* Blog */
+          article {
+              padding-bottom: 1em;
+          }
+          time {
+              font-size: 0.6em;
+          }
+  
+          /* Main content */
+          main {
+              width: 100%;
+              padding: 15px;
+              background-color: #fff; 
+              position: relative; /* Set main as the positioning context */
+              min-height: 400px; /* Ensure there&#x27;s some space even when content is hidden */
+          }
+  
+          main &#x3E; section:not(#home) {
+              padding: 15px 0; /* Padding for sections, excluding #home */
+          }
+  
+  
+          main img, aside img {
+              max-width: 100%;
+          }
+  
+          /* Default all sections to be hidden */
+          section {
+              background-color: #fff; /* Solid white background */
+              opacity: 0;
+              visibility: hidden;
+              position: absolute; 
+              top: 0;
+              left: 15px; /* Adjusted to account for main&#x27;s padding */
+              right: 15px; /* Adjusted to account for main&#x27;s padding */
+              bottom: 15px; /* Adjusted to account for main&#x27;s padding */
+              transition: opacity 0.3s, visibility 0.3s;
+              overflow: auto; /* To enable scrolling if content is too long */
+              transition: none;
+          }
+  
+          body:target section#home {
+              opacity: 0;
+              visibility: hidden;
+          }
+  
+          /* Show #home by default. It remains in the flow so it doesn&#x27;t overlay anything. */
+          section#home {
+              opacity: 1;
+              visibility: visible;
+              position: static;
+          }
+  
+          /* Show targeted sections, with a higher z-index to ensure they overlay #home */
+          section:target {
+              opacity: 1;
+              visibility: visible;
+              z-index: 3;
+          }
+      &#x3C;/style&#x3E;
+  &#x3C;/head&#x3E;
+  
+  &#x3C;body&#x3E;
+      &#x3C;div id=&#x22;_&#x22; style=&#x22;display: none;&#x22;&#x3E;&#x3C;/div&#x3E;
+      &#x3C;!-- Centering Container --&#x3E;
+      &#x3C;div class=&#x22;container&#x22;&#x3E;
+          &#x3C;!-- Header --&#x3E;
+          &#x3C;header&#x3E;
+              &#x3C;h1&#x3E;Smol Web Fans&#x3C;/h1&#x3E;
+          &#x3C;/header&#x3E;
+  
+          &#x3C;!-- Navigation --&#x3E;
+          &#x3C;nav&#x3E;
+              &#x3C;ul&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#_&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E; &#x3C;!-- First item should be #_ --&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#about&#x22;&#x3E;About&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#blog&#x22;&#x3E;Blog&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#contact&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+              &#x3C;/ul&#x3E;
+          &#x3C;/nav&#x3E;
+  
+          &#x3C;!-- Content Wrapper --&#x3E;
+          &#x3C;div class=&#x22;content-wrapper&#x22;&#x3E;
+              &#x3C;!-- Sidebar --&#x3E;
+              &#x3C;aside&#x3E;
+                  &#x3C;h2&#x3E;Sidebar&#x3C;/h2&#x3E;
+                  &#x3C;p&#x3E;This is an optional sidebar. Put any content you like here.&#x3C;/p&#x3E;
+              &#x3C;/aside&#x3E;
+  
+              &#x3C;!-- Main content --&#x3E;
+              &#x3C;main&#x3E;
+                  &#x3C;a id=&#x22;default&#x22;&#x3E;&#x3C;/a&#x3E;
+                  &#x3C;section id=&#x22;home&#x22; class=&#x22;active-section&#x22;&#x3E;
+                      &#x3C;h2&#x3E;Home&#x3C;/h2&#x3E;
+                      &#x3C;p&#x3E;For fans of a more simplified online experience.&#x3C;/p&#x3E;
+                  &#x3C;/section&#x3E;
+      
+                  &#x3C;section id=&#x22;about&#x22;&#x3E;
+                      &#x3C;h2&#x3E;About&#x3C;/h2&#x3E;
+                      &#x3C;p&#x3E;This is a sentence all about you.&#x3C;/p&#x3E;
+                  &#x3C;/section&#x3E;
+      
+                  &#x3C;section id=&#x22;blog&#x22;&#x3E;
+                      &#x3C;h2&#x3E;Blog&#x3C;/h2&#x3E;
+                      &#x3C;article&#x3E;
+                          &#x3C;h3&#x3E;Publishing this site &#x3C;time datetime=&#x22;2004-08-13&#x22;&#x3E;08.13.2004&#x3C;/time&#x3E;&#x3C;/h3&#x3E;
+                          &#x3C;p&#x3E;Just launched! I can&#x27;t wait to share it.&#x3C;/p&#x3E;
+                      &#x3C;/article&#x3E;
+  
+                      &#x3C;article&#x3E;
+                          &#x3C;h3&#x3E;Updating this site &#x3C;time datetime=&#x22;2004-08-18&#x22;&#x3E;08.18.2004&#x3C;/time&#x3E;&#x3C;/h3&#x3E;
+                          &#x3C;p&#x3E;I&#x27;ve added so much to it since launch!&#x3C;/p&#x3E;
+                      &#x3C;/article&#x3E;
+                  &#x3C;/section&#x3E;
+      
+                  &#x3C;section id=&#x22;contact&#x22;&#x3E;
+                      &#x3C;h2&#x3E;Contact&#x3C;/h2&#x3E;
+                      &#x3C;p&#x3E;How people can reach you.&#x3C;/p&#x3E;
+                  &#x3C;/section&#x3E;
+              &#x3C;/main&#x3E;
+          &#x3C;/div&#x3E;
+  
+          &#x3C;!-- Footer --&#x3E;
+          &#x3C;footer&#x3E;
+              &#x26;copy; 2023 Smol &#x26; Old Web Fans. All Rights Reserved.
+          &#x3C;/footer&#x3E;
+      &#x3C;/div&#x3E; &#x3C;!-- End of Centering Container --&#x3E;
+  &#x3C;/body&#x3E;
+  
+  &#x3C;/html&#x3E;</textarea></span>
+<br> <br>
+
+<h4>Museum of Arts</h4>
+<a href="/layouts/museum-theme.html" target="_blank"><img src="images/museum-arts-theme.png"></a>
+<a href="/layouts/museum-theme.html" target="_blank"><img src="images/example-website-button.gif"></a>
+<span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">&#x3C;!-- Museum Theme - Layout by David V. Kimball // https://david.qa --&#x3E;
+
+  &#x3C;!DOCTYPE html&#x3E;
+  &#x3C;html lang=&#x22;en&#x22;&#x3E;
+  
+  &#x3C;head&#x3E;
+      &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+      &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22;&#x3E;
+      &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0&#x22;&#x3E;
+      &#x3C;title&#x3E;Museum of Arts&#x3C;/title&#x3E;
+      &#x3C;style&#x3E;
+  
+          body, h1, h2, p, ul, li, a {
+              margin: 0;
+              padding: 0;
+              font-family: &#x27;Arial&#x27;, sans-serif;
+          }
+  
+          body {
+              background-color: #efebe9; /* Museum beige */
+              color: #5d4037;  /* Dark brown text */
+              font-size: 16px;
+              line-height: 1.6;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              min-height: 100vh;
+              padding-bottom: 0px;
+          }
+  
+          a {
+              text-decoration: none;
+              color: #5d4037; /* Dark brown link */
+          }
+  
+          a:hover {
+              text-decoration: underline;
+          }
+  
+          /* Museum container */
+          .museum-container {
+          border: 2px solid #8d6e63;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          display: flex; /* Add this to center the main-content */
+          justify-content: center;
+      }
+  
+          /* Art Navigation */
+          .art-nav {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 60px;
+              background: rgba(255, 255, 255, 0.9);
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+              z-index: 1000;
+          }
+  
+          .art-nav a {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              line-height: 50px;         /* Adjusted to match height */
+              text-decoration: none;
+          }
+  
+          .art-nav a::before {
+              content: &#x27;&#x27;;
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              background: #d7ccc8; /* Default color */
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: -1;
+              transition: transform 0.2s;
+              text-decoration: none;
+          }
+  
+          .art-nav a:hover::before {
+              transform: scale(1.1);
+              text-decoration: none;
+          }
+  
+          .art-nav a[data-section=&#x22;painting&#x22;]::before {
+              background: #e57373; /* color for painting */
+          }
+  
+          .art-nav a[data-section=&#x22;sculpture&#x22;]::before {
+              background: #81c784; /* color for sculpture */
+          }
+  
+          .art-nav a[data-section=&#x22;photography&#x22;]::before {
+              background: #64b5f6; /* color for photography */
+          }
+  
+          .art-nav a[data-section=&#x22;digital-art&#x22;]::before {
+              background: #ffb74d; /* color for digital-art */
+          }
+  
+          .art-nav a[data-section=&#x22;pottery&#x22;]::before {
+              background: #ba68c8; /* color for pottery */
+          }
+  
+          /* Main content */
+          .main-content {
+              width: 100%;
+              padding: 2rem;
+              background-color: #efebe9;
+              box-sizing: border-box;
+              position: relative; /* Set main as the positioning context */
+              min-height: 500px; /* Ensure there&#x27;s some space even when content is hidden */
+              max-height: calc(100vh - 60px); /* 60px is the height of .art-nav */
+              overflow: auto; /* Allows scrolling within .main-content if needed */
+          }
+  
+  
+          @media (min-width: 900px) {  /* This breakpoint can be adjusted based on when you want the design to change */
+              .main-content {
+                  width: 800px;  /* Set a fixed width for larger screens */
+                  min-width: 800px;  /* Ensure it doesn&#x27;t shrink below this for larger screens */
+              }
+          }        
+  
+          .main-content &#x3E; section {
+              box-sizing: border-box;
+          }
+  
+          .main-content &#x3E; section:not(#home) {
+              padding: 32px 15px; /* Padding for sections, excluding #home */
+          }
+  
+          .main-content img {
+              max-width: 100%;
+          }
+  
+          /* Default all sections to be hidden */
+          section {
+              background-color: #efebe9; 
+              opacity: 0;
+              visibility: hidden;
+              position: absolute; 
+              top: 0;
+              left: 15px; /* Adjusted to account for main&#x27;s padding */
+              right: 15px; /* Adjusted to account for main&#x27;s padding */
+              bottom: 15px; /* Adjusted to account for main&#x27;s padding */
+              transition: opacity 0.3s, visibility 0.3s;
+              overflow: auto; /* To enable scrolling if content is too long */
+              transition: none;
+          }
+  
+          body:target section#home {
+              opacity: 0;
+              visibility: hidden;
+          }
+  
+          /* Show #home by default. It remains in the flow so it doesn&#x27;t overlay anything. */
+          section#home {
+              opacity: 1;
+              visibility: visible;
+              position: static;
+          }
+  
+          /* Show targeted sections, with a higher z-index to ensure they overlay #home */
+          section:target {
+              opacity: 1;
+              visibility: visible;
+              z-index: 3;
+          }
+      &#x3C;/style&#x3E;
+  &#x3C;/head&#x3E;
+  
+  &#x3C;body&#x3E;
+      &#x3C;div id=&#x22;_&#x22; style=&#x22;display: none;&#x22;&#x3E;&#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;museum-container&#x22;&#x3E;
+  
+          &#x3C;!-- Main Content --&#x3E;
+          &#x3C;main class=&#x22;main-content&#x22;&#x3E;
+              &#x3C;section id=&#x22;home&#x22;&#x3E;
+                  &#x3C;h1&#x3E;Painting&#x3C;/h1&#x3E;
+                  &#x3C;p&#x3E;Painting is the practice of applying paint, pigment, color or other medium to a solid surface. The medium is commonly applied to the base with a brush.&#x3C;/p&#x3E;
+              &#x3C;/section&#x3E;
+  
+              &#x3C;section id=&#x22;sculpture&#x22;&#x3E;
+                  &#x3C;h1&#x3E;Sculpture&#x3C;/h1&#x3E;
+                  &#x3C;p&#x3E;Sculpture is the branch of the visual arts that operates in three dimensions.&#x3C;/p&#x3E;
+              &#x3C;/section&#x3E;
+  
+              &#x3C;section id=&#x22;photography&#x22;&#x3E;
+                  &#x3C;h1&#x3E;Photography&#x3C;/h1&#x3E;
+                  &#x3C;p&#x3E;Photography is the art, application, and practice of creating durable images by recording light, either electronically or chemically.&#x3C;/p&#x3E;
+              &#x3C;/section&#x3E;
+  
+              &#x3C;section id=&#x22;digital-art&#x22;&#x3E;
+                  &#x3C;h1&#x3E;Digital Art&#x3C;/h1&#x3E;
+                  &#x3C;p&#x3E;Digital art is an artistic work or practice that uses digital technology as part of the creative or presentation process.&#x3C;/p&#x3E;
+              &#x3C;/section&#x3E;
+  
+              &#x3C;section id=&#x22;pottery&#x22;&#x3E;
+                  &#x3C;h1&#x3E;Pottery&#x3C;/h1&#x3E;
+                  &#x3C;p&#x3E;Pottery is the process of forming vessels and other objects with clay and other ceramic materials, which are fired at high temperatures to give them a hard, durable form.&#x3C;/p&#x3E;
+              &#x3C;/section&#x3E;
+          &#x3C;/main&#x3E;
+      &#x3C;/div&#x3E;
+  
+      &#x3C;!-- Art Navigation --&#x3E;
+      &#x3C;nav class=&#x22;art-nav&#x22;&#x3E;
+          &#x3C;a href=&#x22;#_&#x22; data-section=&#x22;painting&#x22;&#x3E;&#x1F3A8;&#x3C;/a&#x3E; &#x3C;!-- First item should be #_ --&#x3E;
+          &#x3C;a href=&#x22;#sculpture&#x22; data-section=&#x22;sculpture&#x22;&#x3E;&#x1F9F1;&#x3C;/a&#x3E;
+          &#x3C;a href=&#x22;#photography&#x22; data-section=&#x22;photography&#x22;&#x3E;&#x1F4F7;&#x3C;/a&#x3E;
+          &#x3C;a href=&#x22;#digital-art&#x22; data-section=&#x22;digital-art&#x22;&#x3E;&#x1F4BB;&#x3C;/a&#x3E;
+          &#x3C;a href=&#x22;#pottery&#x22; data-section=&#x22;pottery&#x22;&#x3E;&#x1F3FA;&#x3C;/a&#x3E;
+      &#x3C;/nav&#x3E;
+  
+  &#x3C;/body&#x3E;
+  
+  &#x3C;/html&#x3E;</textarea></span>
+<br> <br> 
+
+<h4>Space Exploration</h4>
+<a href="/layouts/space-exploration.html" target="_blank"><img src="images/space-exploration-theme.png"></a>
+<a href="/layouts/space-exploration.html" target="_blank"><img src="images/example-website-button.gif"></a>
+<span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">&#x3C;!-- Space Exploration Theme - Layout by David V. Kimball // https://david.qa --&#x3E;
+
+  &#x3C;!DOCTYPE html&#x3E;
+  &#x3C;html lang=&#x22;en&#x22;&#x3E;
+  &#x3C;head&#x3E;
+      &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+      &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22;&#x3E;
+      &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0&#x22;&#x3E;
+      &#x3C;title&#x3E;Space Exploration&#x3C;/title&#x3E;
+      &#x3C;style&#x3E;
+          
+          body, h1, h2, p, ul, li, a {
+              margin: 0;
+              padding: 0;
+              font-family: &#x27;Arial&#x27;, sans-serif;
+          }
+  
+          body {
+              background-color: #1a1a1a; /* Deep space black */
+              color: #f8f8f8;  /* Star white */
+              font-size: 16px;
+              line-height: 1.6;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              min-height: 100vh;
+              overflow: hidden;
+          }
+  
+          a {
+              text-decoration: none;
+              color: #f8f8f8;
+          }
+  
+          a:hover {
+              text-decoration: underline;
+          }
+  
+          /* Space container */
+          .space-container {
+              display: flex;
+              max-width: 1200px;
+              height: 80vh;
+              border: 3px solid #4a90e2; /* Horizon blue */
+              border-radius: 20px;
+              overflow: hidden;
+          }
+  
+          /* Planet Navigation */
+          .planet-nav {
+              flex-basis: 20%;
+              position: relative;
+              background-color: #2c3e50; /* Night sky blue */
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              padding: 15px;
+          }
+  
+          .planet-nav ul {
+              list-style: none;
+          }
+  
+          .planet-nav li {
+              margin-bottom: 20px;
+          }
+  
+          /* Main Content */
+          .main-content {
+          width: 800px; /* Adjusted width to fill space */
+          background-color: #1a1a1a; 
+          overflow: hidden;
+          position: relative; /* Set as position reference for absolute positioned children */
+          padding: 15px; /* Add padding here */
+      }
+  
+          .main-content &#x3E; section:not(#mercury) {
+              padding: 30px 15px; /* Padding for sections, excluding #home */
+          }
+  
+          .main-content img {
+              max-width: 100%;
+          }
+  
+          /* Spacing */
+          .main-content {
+              padding: 30px;  
+          }
+  
+          /* Default all sections to be hidden */
+          section {
+              background-color: #1a1a1a; /* Solid background */
+              opacity: 0;
+              visibility: hidden;
+              position: absolute; 
+              top: 0;
+              left: 15px; /* Adjusted to account for main&#x27;s padding */
+              right: 15px; /* Adjusted to account for main&#x27;s padding */
+              bottom: 15px; /* Adjusted to account for main&#x27;s padding */
+              transition: opacity 0.3s, visibility 0.3s;
+              overflow: auto; /* To enable scrolling if content is too long */
+              transition: none;
+          }
+  
+          body:target section#mercury {
+              opacity: 0;
+              visibility: hidden;
+          }
+  
+          /* Show #mercury by default. It remains in the flow so it doesn&#x27;t overlay anything. */
+          section#mercury {
+              opacity: 1;
+              visibility: visible;
+              position: static;
+          }
+  
+          /* Show targeted sections, with a higher z-index to ensure they overlay #home */
+          section:target {
+              opacity: 1;
+              visibility: visible;
+              z-index: 3;
+          }
+  
+          /* Optional Space logo */
+          .space-logo {
+              position: absolute;
+              top: 25px; /* Adjust spacing from the top */
+              z-index: 4; /* Ensure it sits above other content */
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 50%;
+          }
+  
+          .space-logo img {
+              max-width: 90%; /* Adjust this to your desired size */
+              margin: 0 auto;
+              height: auto; /* Ensure aspect ratio is preserved */
+          }
+  
+      &#x3C;/style&#x3E;
+  &#x3C;/head&#x3E;
+  
+  &#x3C;body&#x3E;
+      &#x3C;div id=&#x22;_&#x22; style=&#x22;display: none;&#x22;&#x3E;&#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;space-container&#x22;&#x3E;
+          &#x3C;!-- Planet Navigation --&#x3E;
+          &#x3C;nav class=&#x22;planet-nav&#x22;&#x3E;
+              &#x3C;!-- Optional Space Logo --&#x3E;
+              &#x3C;!-- &#x3C;div class=&#x22;space-logo&#x22;&#x3E;
+                  &#x3C;img src=&#x22;space-logo.png&#x22; alt=&#x22;Space Exploration Logo&#x22;&#x3E;
+              &#x3C;/div&#x3E; --&#x3E;
+              &#x3C;ul&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#_&#x22;&#x3E;Mercury&#x3C;/a&#x3E;&#x3C;/li&#x3E; &#x3C;!-- First item should be #_ --&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#venus&#x22;&#x3E;Venus&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#earth&#x22;&#x3E;Earth&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#mars&#x22;&#x3E;Mars&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                  &#x3C;li&#x3E;&#x3C;a href=&#x22;#jupiter&#x22;&#x3E;Jupiter&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+              &#x3C;/ul&#x3E;
+          &#x3C;/nav&#x3E;
+  
+          &#x3C;!-- Main Content --&#x3E;
+          &#x3C;main class=&#x22;main-content&#x22;&#x3E;
+              &#x3C;a id=&#x22;default&#x22;&#x3E;&#x3C;/a&#x3E;
+              &#x3C;section id=&#x22;mercury&#x22;&#x3E;
+                  &#x3C;h1&#x3E;Mercury&#x3C;/h1&#x3E;
+                  &#x3C;p&#x3E;Mercury is the smallest and innermost planet in the Solar System.&#x3C;/p&#x3E;
+              &#x3C;/section&#x3E;
+              
+              &#x3C;section id=&#x22;venus&#x22;&#x3E;
+                  &#x3C;h1&#x3E;Venus&#x3C;/h1&#x3E;
+                  &#x3C;p&#x3E;Venus is the second planet from the Sun.&#x3C;/p&#x3E;
+              &#x3C;/section&#x3E;
+  
+              &#x3C;section id=&#x22;earth&#x22;&#x3E;
+                  &#x3C;h1&#x3E;Earth&#x3C;/h1&#x3E;
+                  &#x3C;p&#x3E;Our home, Earth, is the third planet from the Sun and the only world known to support an atmosphere with free oxygen, oceans of water on its surface, and, life.&#x3C;/p&#x3E;
+              &#x3C;/section&#x3E;
+  
+              &#x3C;section id=&#x22;mars&#x22;&#x3E;
+                  &#x3C;h1&#x3E;Mars&#x3C;/h1&#x3E;
+                  &#x3C;p&#x3E;Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury.&#x3C;/p&#x3E;
+              &#x3C;/section&#x3E;
+  
+              &#x3C;section id=&#x22;jupiter&#x22;&#x3E;
+                  &#x3C;h1&#x3E;Jupiter&#x3C;/h1&#x3E;
+                  &#x3C;p&#x3E;Jupiter is the fifth planet from the Sun and the largest in the Solar System.&#x3C;/p&#x3E;
+              &#x3C;/section&#x3E;
+          &#x3C;/main&#x3E;
+      &#x3C;/div&#x3E;    
+  &#x3C;/body&#x3E;
+  &#x3C;/html&#x3E;</textarea></span>
+<br> <br> 
+
+<h4>Space Exploration Alt</h4>
+<a href="/layouts/space-exploration-alt.html" target="_blank"><img src="images/space-exploration-theme-alt.png"></a>
+<a href="/layouts/space-exploration-alt.html" target="_blank"><img src="images/example-website-button.gif"></a>
+<span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">&#x3C;!-- Space Exploration Alt Theme - Layout by David V. Kimball // https://david.qa --&#x3E;
+
+  &#x3C;!DOCTYPE html&#x3E;
+  &#x3C;html lang=&#x22;en&#x22;&#x3E;
+  &#x3C;head&#x3E;
+      &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+      &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22;&#x3E;
+      &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0&#x22;&#x3E;
+      &#x3C;title&#x3E;Galactic Explorations&#x3C;/title&#x3E;
+      &#x3C;style&#x3E;
+          
+          body, h1, h2, p, ul, li, a {
+              margin: 0;
+              padding: 0;
+              font-family: &#x27;Arial&#x27;, sans-serif;
+          }
+  
+          body {
+              background-color: #1a1a1a; /* Deep space black */
+              color: #f8f8f8;  /* Star white */
+              font-size: 16px;
+              line-height: 1.6;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              min-height: 100vh;
+              overflow: hidden;
+          }
+  
+          a {
+              text-decoration: none;
+              color: #f8f8f8;
+          }
+  
+          a:hover {
+              text-decoration: underline;
+          }
+  
+          h1 {
+              margin-bottom: 20px;
+              font-size: 2.5em;
+          }
+  
+          /* Navigation bar */
+          .planet-nav {
+              display: flex;
+              justify-content: center;
+              margin-bottom: 20px;
+          }
+  
+          .planet-nav a {
+              margin: 0 10px;
+          }
+  
+          /* Main Content */
+          .main-content {
+              max-width: 100%;  /* Default to full width for mobile */
+              margin: 0 auto; /* centers the main content */
+              background-color: #1a1a1a; 
+              position: relative;
+              height: 60vh;
+              overflow-y: auto;
+              padding: 20px;
+              border: 3px solid #4a90e2; /* Horizon blue */
+              border-radius: 20px;
+              box-sizing: border-box;  
+          }
+  
+          @media (min-width: 900px) {  /* This breakpoint can be adjusted based on when you want the design to change */
+              .main-content {
+                  width: 800px;  /* Set a fixed width for larger screens */
+                  min-width: 800px;  /* Ensure it doesn&#x27;t shrink below this for larger screens */
+              }
+          }
+  
+          .main-content &#x3E; section:not(#mercury) {
+              padding: 20px 20px; /* Padding for sections, excluding #home */
+          }
+  
+          .main-content img {
+              max-width: 100%;
+          }
+  
+          /* Default all sections to be hidden */
+          section {
+              background-color: #1a1a1a; /* Solid background */
+              opacity: 0;
+              visibility: hidden;
+              position: absolute; 
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              transition: none;
+              overflow: auto; /* To enable scrolling if content is too long */
+          }
+  
+          body:target section#mercury {
+              opacity: 0;
+              visibility: hidden;
+          }
+  
+          /* Show #mercury by default. It remains in the flow so it doesn&#x27;t overlay anything. */
+          section#mercury {
+              opacity: 1;
+              visibility: visible;
+              position: static;
+          }
+  
+          /* Hide mercury when any other section is targeted */
+          section:target ~ #mercury {
+              opacity: 0;
+              visibility: hidden;
+              position: absolute; /* Remove it from the flow */
+          }
+  
+          /* Show targeted sections, with a higher z-index to ensure they overlay #home */
+          section:target {
+              opacity: 1;
+              visibility: visible;
+              z-index: 3;
+              position: absolute; /* Ensure they are taken out of the flow */
+          }
+  
+  
+      &#x3C;/style&#x3E;
+  &#x3C;/head&#x3E;
+  &#x3C;body&#x3E;
+      &#x3C;div id=&#x22;_&#x22; style=&#x22;display: none;&#x22;&#x3E;&#x3C;/div&#x3E;
+      &#x3C;h1&#x3E;Galactic Explorations&#x3C;/h1&#x3E;
+      &#x3C;!-- Planet Navigation --&#x3E;
+      &#x3C;nav class=&#x22;planet-nav&#x22;&#x3E;
+          &#x3C;a href=&#x22;#_&#x22;&#x3E;Mercury&#x3C;/a&#x3E; &#x3C;!-- First item should be #_ --&#x3E;
+          &#x3C;a href=&#x22;#venus&#x22;&#x3E;Venus&#x3C;/a&#x3E;
+          &#x3C;a href=&#x22;#earth&#x22;&#x3E;Earth&#x3C;/a&#x3E;
+          &#x3C;a href=&#x22;#mars&#x22;&#x3E;Mars&#x3C;/a&#x3E;
+          &#x3C;a href=&#x22;#jupiter&#x22;&#x3E;Jupiter&#x3C;/a&#x3E;
+      &#x3C;/nav&#x3E;
+      &#x3C;!-- Main Content --&#x3E;
+      &#x3C;main class=&#x22;main-content&#x22;&#x3E;
+          &#x3C;a id=&#x22;default&#x22;&#x3E;&#x3C;/a&#x3E;
+          &#x3C;section id=&#x22;mercury&#x22; class=&#x22;active-section&#x22;&#x3E;
+              &#x3C;h2&#x3E;Mercury&#x3C;/h2&#x3E;
+              &#x3C;p&#x3E;Mercury is the smallest and innermost planet in the Solar System.&#x3C;/p&#x3E;
+          &#x3C;/section&#x3E;
+          
+          &#x3C;section id=&#x22;venus&#x22;&#x3E;
+              &#x3C;h2&#x3E;Venus&#x3C;/h2&#x3E;
+              &#x3C;p&#x3E;Venus is the second planet from the Sun.&#x3C;/p&#x3E;
+          &#x3C;/section&#x3E;
+  
+          &#x3C;section id=&#x22;earth&#x22;&#x3E;
+              &#x3C;h2&#x3E;Earth&#x3C;/h2&#x3E;
+              &#x3C;p&#x3E;Our home, Earth, is the third planet from the Sun and the only world known to support an atmosphere with free oxygen, oceans of water on its surface, and, life.&#x3C;/p&#x3E;
+          &#x3C;/section&#x3E;
+  
+          &#x3C;section id=&#x22;mars&#x22;&#x3E;
+              &#x3C;h2&#x3E;Mars&#x3C;/h2&#x3E;
+              &#x3C;p&#x3E;Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury.&#x3C;/p&#x3E;
+          &#x3C;/section&#x3E;
+  
+          &#x3C;section id=&#x22;jupiter&#x22;&#x3E;
+              &#x3C;h2&#x3E;Jupiter&#x3C;/h2&#x3E;
+              &#x3C;p&#x3E;Jupiter is the fifth planet from the Sun and the largest in the Solar System.&#x3C;/p&#x3E;
+          &#x3C;/section&#x3E;
+      &#x3C;/main&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;/body&#x3E;
+  &#x3C;/html&#x3E;</textarea></span>
+<br> <br> 
+
+<h3 id="terms">Terms of Use</h3>
+<p>Please link back to this site in some capacity if you use one of my themes.</p>
+<p>One way you can link to me is by using this button!</p>
+<a href="https://david.qa/"><img src="buttons/davidqa.gif"></a> <textarea readonly="" cols="10" rows="2" onclick="this.setSelectionRange(0, this.value.length)">&lt;a href="https://david.qa/"&gt;&lt;img src="https://david.qa/images/davidqa.gif" alt="david.qa"&gt;&lt;/a&gt;</textarea>
+</div>
+
+<h3>More Layouts</h3>
+<p>Check out the <a href="/links">links</a> page to find more cool free layouts.</p>
+
+
+</div><!-- End of Main -->
+
+<!-- Footer -->
+<footer>
+  <div id="fl">©2023 <a href="http://davidvkimball.com" target="_blank">David V. Kimball</a> • <a href="/about#credits">credits</a></div>
+</footer><!-- End of Footer -->
+
+</div><!-- End of Body -->
+
+<!-- Top of Page -->
+<a href="#" id="pagetop">▲top</a>
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/jquery.toggle.js"></script>
+<script src="js/jquery.scroll.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/html_loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!-- Smol Web Theme - Layout by David V. Kimball // https://david.qa -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smol Web Theme</title>
+    <style>
+
+        body, h1, h2, h3, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: #f3f3f3;
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ff4500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Centering container */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #ff4500;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #f3f3f3;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        /* Content Wrapper */
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        /* Sidebar */
+        aside {
+            flex-basis: 20%;
+            padding: 15px;
+            background-color: #e6e6e6;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        
+        /* Blog */
+        article {
+            padding-bottom: 1em;
+        }
+        time {
+            font-size: 0.6em;
+        }
+
+        /* Main content */
+        main {
+            width: 100%;
+            padding: 15px;
+            background-color: #fff; 
+            position: relative; /* Set main as the positioning context */
+            min-height: 400px; /* Ensure there's some space even when content is hidden */
+        }
+
+        main > section:not(#home) {
+            padding: 15px 0; /* Padding for sections, excluding #home */
+        }
+
+
+        main img, aside img {
+            max-width: 100%;
+        }
+
+        /* Default all sections to be hidden */
+        section {
+            background-color: #fff; /* Solid white background */
+            opacity: 0;
+            visibility: hidden;
+            position: absolute; 
+            top: 0;
+            left: 15px; /* Adjusted to account for main's padding */
+            right: 15px; /* Adjusted to account for main's padding */
+            bottom: 15px; /* Adjusted to account for main's padding */
+            transition: opacity 0.3s, visibility 0.3s;
+            overflow: auto; /* To enable scrolling if content is too long */
+            transition: none;
+        }
+
+        body:target section#home {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Show #home by default. It remains in the flow so it doesn't overlay anything. */
+        section#home {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+        }
+
+        /* Show targeted sections, with a higher z-index to ensure they overlay #home */
+        section:target {
+            opacity: 1;
+            visibility: visible;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="_" style="display: none;"></div>
+    <!-- Centering Container -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Smol Web Fans</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#_">Home</a></li> <!-- First item should be #_ -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <!-- Sidebar -->
+            <aside>
+                <h2>Sidebar</h2>
+                <p>This is an optional sidebar. Put any content you like here.</p>
+            </aside>
+
+            <!-- Main content -->
+            <main>
+                <a id="default"></a>
+                <section id="home" class="active-section">
+                    <h2>Home</h2>
+                    <p>For fans of a more simplified online experience.</p>
+                </section>
+    
+                <section id="about">
+                    <h2>About</h2>
+                    <p>This is a sentence all about you.</p>
+                </section>
+    
+                <section id="blog">
+                    <h2>Blog</h2>
+                    <article>
+                        <h3>Publishing this site <time datetime="2004-08-13">08.13.2004</time></h3>
+                        <p>Just launched! I can't wait to share it.</p>
+                    </article>
+
+                    <article>
+                        <h3>Updating this site <time datetime="2004-08-18">08.18.2004</time></h3>
+                        <p>I've added so much to it since launch!</p>
+                    </article>
+                </section>
+    
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <p>How people can reach you.</p>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            &copy; 2023 Smol & Old Web Fans. All Rights Reserved.
+        </footer>
+    </div> <!-- End of Centering Container -->
+</body>
+
+</html>

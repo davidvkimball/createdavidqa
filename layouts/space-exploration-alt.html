@@ -1,0 +1,170 @@
+<!-- Space Exploration Alt Theme - Layout by David V. Kimball // https://david.qa -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Explorations</title>
+    <style>
+        
+        body, h1, h2, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a; /* Deep space black */
+            color: #f8f8f8;  /* Star white */
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f8f8f8;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        /* Navigation bar */
+        .planet-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .planet-nav a {
+            margin: 0 10px;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 100%;  /* Default to full width for mobile */
+            margin: 0 auto; /* centers the main content */
+            background-color: #1a1a1a; 
+            position: relative;
+            height: 60vh;
+            overflow-y: auto;
+            padding: 20px;
+            border: 3px solid #4a90e2; /* Horizon blue */
+            border-radius: 20px;
+            box-sizing: border-box;  
+        }
+
+        @media (min-width: 900px) {  /* This breakpoint can be adjusted based on when you want the design to change */
+            .main-content {
+                width: 800px;  /* Set a fixed width for larger screens */
+                min-width: 800px;  /* Ensure it doesn't shrink below this for larger screens */
+            }
+        }
+
+        .main-content > section:not(#mercury) {
+            padding: 20px 20px; /* Padding for sections, excluding #home */
+        }
+
+        .main-content img {
+            max-width: 100%;
+        }
+
+        /* Default all sections to be hidden */
+        section {
+            background-color: #1a1a1a; /* Solid background */
+            opacity: 0;
+            visibility: hidden;
+            position: absolute; 
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: none;
+            overflow: auto; /* To enable scrolling if content is too long */
+        }
+
+        body:target section#mercury {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Show #mercury by default. It remains in the flow so it doesn't overlay anything. */
+        section#mercury {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+        }
+
+        /* Hide mercury when any other section is targeted */
+        section:target ~ #mercury {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute; /* Remove it from the flow */
+        }
+
+        /* Show targeted sections, with a higher z-index to ensure they overlay #home */
+        section:target {
+            opacity: 1;
+            visibility: visible;
+            z-index: 3;
+            position: absolute; /* Ensure they are taken out of the flow */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="_" style="display: none;"></div>
+    <h1>Galactic Explorations</h1>
+    <!-- Planet Navigation -->
+    <nav class="planet-nav">
+        <a href="#_">Mercury</a> <!-- First item should be #_ -->
+        <a href="#venus">Venus</a>
+        <a href="#earth">Earth</a>
+        <a href="#mars">Mars</a>
+        <a href="#jupiter">Jupiter</a>
+    </nav>
+    <!-- Main Content -->
+    <main class="main-content">
+        <a id="default"></a>
+        <section id="mercury" class="active-section">
+            <h2>Mercury</h2>
+            <p>Mercury is the smallest and innermost planet in the Solar System.</p>
+        </section>
+        
+        <section id="venus">
+            <h2>Venus</h2>
+            <p>Venus is the second planet from the Sun.</p>
+        </section>
+
+        <section id="earth">
+            <h2>Earth</h2>
+            <p>Our home, Earth, is the third planet from the Sun and the only world known to support an atmosphere with free oxygen, oceans of water on its surface, and, life.</p>
+        </section>
+
+        <section id="mars">
+            <h2>Mars</h2>
+            <p>Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury.</p>
+        </section>
+
+        <section id="jupiter">
+            <h2>Jupiter</h2>
+            <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</p>
+        </section>
+    </main>
+</div>
+</body>
+</html>

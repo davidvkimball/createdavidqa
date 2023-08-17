@@ -1,0 +1,193 @@
+<!-- Space Exploration Theme - Layout by David V. Kimball // https://david.qa -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Exploration</title>
+    <style>
+        
+        body, h1, h2, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a; /* Deep space black */
+            color: #f8f8f8;  /* Star white */
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f8f8f8;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Space container */
+        .space-container {
+            display: flex;
+            max-width: 1200px;
+            height: 80vh;
+            border: 3px solid #4a90e2; /* Horizon blue */
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        /* Planet Navigation */
+        .planet-nav {
+            flex-basis: 20%;
+            position: relative;
+            background-color: #2c3e50; /* Night sky blue */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .planet-nav ul {
+            list-style: none;
+        }
+
+        .planet-nav li {
+            margin-bottom: 20px;
+        }
+
+        /* Main Content */
+        .main-content {
+        width: 800px; /* Adjusted width to fill space */
+        background-color: #1a1a1a; 
+        overflow: hidden;
+        position: relative; /* Set as position reference for absolute positioned children */
+        padding: 15px; /* Add padding here */
+    }
+
+        .main-content > section:not(#mercury) {
+            padding: 30px 15px; /* Padding for sections, excluding #home */
+        }
+
+        .main-content img {
+            max-width: 100%;
+        }
+
+        /* Spacing */
+        .main-content {
+            padding: 30px;  
+        }
+
+        /* Default all sections to be hidden */
+        section {
+            background-color: #1a1a1a; /* Solid background */
+            opacity: 0;
+            visibility: hidden;
+            position: absolute; 
+            top: 0;
+            left: 15px; /* Adjusted to account for main's padding */
+            right: 15px; /* Adjusted to account for main's padding */
+            bottom: 15px; /* Adjusted to account for main's padding */
+            transition: opacity 0.3s, visibility 0.3s;
+            overflow: auto; /* To enable scrolling if content is too long */
+            transition: none;
+        }
+
+        body:target section#mercury {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Show #mercury by default. It remains in the flow so it doesn't overlay anything. */
+        section#mercury {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+        }
+
+        /* Show targeted sections, with a higher z-index to ensure they overlay #home */
+        section:target {
+            opacity: 1;
+            visibility: visible;
+            z-index: 3;
+        }
+
+        /* Optional Space logo */
+        .space-logo {
+            position: absolute;
+            top: 25px; /* Adjust spacing from the top */
+            z-index: 4; /* Ensure it sits above other content */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .space-logo img {
+            max-width: 90%; /* Adjust this to your desired size */
+            margin: 0 auto;
+            height: auto; /* Ensure aspect ratio is preserved */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="_" style="display: none;"></div>
+    <div class="space-container">
+        <!-- Planet Navigation -->
+        <nav class="planet-nav">
+            <!-- Optional Space Logo -->
+            <!-- <div class="space-logo">
+                <img src="space-logo.png" alt="Space Exploration Logo">
+            </div> -->
+            <ul>
+                <li><a href="#_">Mercury</a></li> <!-- First item should be #_ -->
+                <li><a href="#venus">Venus</a></li>
+                <li><a href="#earth">Earth</a></li>
+                <li><a href="#mars">Mars</a></li>
+                <li><a href="#jupiter">Jupiter</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <a id="default"></a>
+            <section id="mercury">
+                <h1>Mercury</h1>
+                <p>Mercury is the smallest and innermost planet in the Solar System.</p>
+            </section>
+            
+            <section id="venus">
+                <h1>Venus</h1>
+                <p>Venus is the second planet from the Sun.</p>
+            </section>
+
+            <section id="earth">
+                <h1>Earth</h1>
+                <p>Our home, Earth, is the third planet from the Sun and the only world known to support an atmosphere with free oxygen, oceans of water on its surface, and, life.</p>
+            </section>
+
+            <section id="mars">
+                <h1>Mars</h1>
+                <p>Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury.</p>
+            </section>
+
+            <section id="jupiter">
+                <h1>Jupiter</h1>
+                <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</p>
+            </section>
+        </main>
+    </div>    
+</body>
+</html>

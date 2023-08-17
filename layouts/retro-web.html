@@ -1,0 +1,202 @@
+<!-- Retro Web Theme - Layout by David V. Kimball // https://david.qa -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Web</title>
+    <style>
+
+        body, h1, h2, p, ul, li, a, header, nav, footer {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: #f0e68c; /* khaki */
+            color: #2f4f4f;  /* dark slate gray */
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #8b4513; /* saddle brown */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Centering container */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            border: 2px dashed #2f4f4f; /* dark slate gray */
+            background-color: #f5deb3; /* wheat */
+            padding: 15px;
+        }
+
+        /* Header */
+        header {
+            color: #2f4f4f; /* dark slate gray */
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px dashed #2f4f4f; /* dark slate gray */
+        }
+
+        /* Navigation */
+        nav {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        /* Content Wrapper */
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        /* Sidebar */
+        aside {
+            flex-basis: 20%;
+            padding: 10px;
+            border-right: 2px dashed #2f4f4f; /* dark slate gray */
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            border-top: 2px dashed #2f4f4f; /* dark slate gray */
+        }
+
+        /* Main content */
+        main {
+            width: 100%;
+            padding: 15px;
+            background-color: #f5deb3; 
+            position: relative; /* Set main as the positioning context */
+            min-height: 400px; /* Ensure there's some space even when content is hidden */
+        }
+
+        main > section:not(#home) {
+            padding: 15px 0; /* Padding for sections, excluding #home */
+        }
+
+
+        main img, aside img {
+            max-width: 100%;
+        }
+
+        /* Default all sections to be hidden */
+        section {
+            background-color: #f5deb3; 
+            opacity: 0;
+            visibility: hidden;
+            position: absolute; 
+            top: 0;
+            left: 15px; /* Adjusted to account for main's padding */
+            right: 15px; /* Adjusted to account for main's padding */
+            bottom: 15px; /* Adjusted to account for main's padding */
+            transition: none;
+        }
+
+        body:target section#home {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Show #home by default. It remains in the flow so it doesn't overlay anything. */
+        section#home {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+        }
+
+        /* Show targeted sections, with a higher z-index to ensure they overlay #home */
+        section:target {
+            opacity: 1;
+            visibility: visible;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="_" style="display: none;"></div>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Retro Web</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#_">Home</a></li> <!-- First item should be #_ -->
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#chat">Chat</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <!-- Sidebar -->
+            <aside>
+                <h2>Notice Board</h2>
+                <p>Latest updates and retro tips here!</p>
+            </aside>
+
+            <!-- Main content -->
+            <main>
+                <a id="default"></a>
+                <section id="home" class="active-section">
+                    <h2>Welcome back to the '90s</h2>
+                    <p>Step back in time and enjoy the nostalgic vibes of the old web.</p>
+                </section>
+    
+                <section id="gallery">
+                    <h2>Gallery</h2>
+                    <p>Display your gallery here.</p>
+                </section>
+    
+                <section id="chat">
+                    <h2>Chat</h2>
+                    <p>Chat with your visitors here.</p>
+                </section>
+    
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <p>How people can reach you.</p>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            &copy; 2023 Retro Vibes. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

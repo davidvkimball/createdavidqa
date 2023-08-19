@@ -4,8 +4,8 @@ https://davidqa.netlify.app/* https://davidqa.com/:splat 301!
 /blog                    https://blog.davidvkimball.com
 /social                  https://davidvkimball.com/#social
 /profiles                https://davidvkimball.com/#social
-/add                     https://davidvkimball.com/#social
-/ad                      https://davidvkimball.com/#social
+/add                     https://links.davidvkimball.com
+/ad                      https://links.davidvkimball.com
 /privacy-policy          https://davidvkimball.com//#terms-policy
 /subscribe#privacypolicy https://davidvkimball.com//#terms-policy
 /subscribe               https://blog.davidvkimball.com/newsletter

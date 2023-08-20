@@ -545,6 +545,10 @@ body.dark .title {
    color:#ccc;
 }
 
+body.dark .textbox {
+   border:1px solid #fff;
+}
+
 /* Mobile menu icon */
 
 body.dark {

@@ -451,6 +451,26 @@ ul #post-list > li {
   /* Spacing after the bullet */
 }
 
+/* keyboard key styles ------------------------------ */
+
+kbd {
+   background-color: #eee;
+   border-radius: 3px;
+   border: 1px solid #b4b4b4;
+   color: #333;
+   display: inline-block;
+   font-size: 0.85em;
+   font-weight: 700;
+   line-height: 1;
+   padding: 2px 4px;
+   white-space: nowrap;
+ }
+
+ body.dark kbd {
+   background-color: #222426;
+   color: #fff;
+ }
+
 /* Light/Dark theme toggle ------------------------------ */
 
 .theme-switcher {
@@ -584,6 +604,20 @@ code {
 }
 
 body.dark .code {
+   border: 1px solid #fff;
+}
+
+/* Table of Contents */
+.table-of-contents {
+   background: #e8e8e8;
+   border: 1px solid #000;
+   border-radius: 10px;
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+body.dark .table-of-contents {
+   background: #2e2e2e;
    border: 1px solid #fff;
 }
 

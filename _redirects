@@ -1,5 +1,5 @@
 # Redirects are listed here.
-https://davidqa.netlify.app/* https://davidqa.com/:splat 301!
+https://davidqa.netlify.app/* https://create.davidqa.com/:splat 301!
 
 /blog                    https://blog.davidvkimball.com
 /social                  https://davidvkimball.com/#social

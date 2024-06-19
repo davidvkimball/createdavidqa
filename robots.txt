@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow:
+
+Sitemap: https://create.david.qa/sitemap.xml

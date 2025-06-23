@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow:
 
-Sitemap: https://create.david.qa/sitemap.xml
+Sitemap: https://create.dvdv.kim/sitemap.xml

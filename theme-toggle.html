@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="darkreader-lock">
-<link rel="icon" href="https://create.david.qa/images/icon-sun.gif">
-<title>theme toggle • create.david.qa</title>
+<link rel="icon" href="https://create.dvdv.kim/images/icon-sun.gif">
+<title>theme toggle • create.dvdv.kim</title>
 <meta name="description" content="get a dark/light theme toggle for your site">
 <meta name="author" content="David V. Kimball">
 <link rel="stylesheet" href="style.css" type="text/css">
@@ -16,14 +16,14 @@
         async src="//gc.zgo.at/count.js"></script>
 
 <!-- OpenGraph -->
-<meta property="og:title" content="theme toggle • create.david.qa">
+<meta property="og:title" content="theme toggle • create.dvdv.kim">
 <meta property="og:description" content="get a dark/light theme toggle for your site">
-<meta property="og:image" content="https://create.david.qa/images/opengraph.png">
-<meta property="og:image:alt" content="3 boxes total, two boxes are Q+A-styled questions in light mode box, grayed out, and one box in dark mode with the brand name and tagline. Content: Q: What's a link? An item that points to another location. create.david.qa - answers to your creative website questions. Q: What's a website? A set of related web pages located under a single domain name.">
+<meta property="og:image" content="https://create.dvdv.kim/images/opengraph.png">
+<meta property="og:image:alt" content="3 boxes total, two boxes are Q+A-styled questions in light mode box, grayed out, and one box in dark mode with the brand name and tagline. Content: Q: What's a link? An item that points to another location. create.dvdv.kim - answers to your creative website questions. Q: What's a website? A set of related web pages located under a single domain name.">
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:type" content="image/png" />
-<meta property="og:url" content="https://create.david.qa" />
+<meta property="og:url" content="https://create.dvdv.kim" />
 
 <!-- Twitter card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -38,10 +38,10 @@
 <header>
 <div class="header-inner">
 <!-- Site Name -->
-<h1><a href="/">create.david.qa</a></h1>
+<h1><a href="/">create.dvdv.kim</a></h1>
 answers to your creative website questions
   <div class="theme-switcher">
-    <img src="https://create.david.qa/images/light.gif" alt="Theme Toggle" id="theme-toggle"> 
+    <img src="https://create.dvdv.kim/images/light.gif" alt="Theme Toggle" id="theme-toggle"> 
   </div>
 </div>
 </header><!-- End of Header -->
@@ -78,13 +78,13 @@ answers to your creative website questions
 <b>Toggle Button HTML</b> (place wherever you want on your site): <br>
 <span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">&lt;!-- Dark/Light Theme Toggle Button --&gt;
 &lt;div class="theme-switcher"&gt;
-  &lt;img src="https://create.david.qa/images/light.gif" alt="Theme toggle" id="theme-toggle"&gt; 
+  &lt;img src="https://create.dvdv.kim/images/light.gif" alt="Theme toggle" id="theme-toggle"&gt; 
 &lt;/div&gt;</textarea></span>
 <h3>What's happening here?</h3>
 <p>You're adding a button to your website users can click to toggle the dark/light theme styles we'll be defining with CSS soon. You can use any image you like, or you can use the two images below with their current names, <span class="inline-markup">light.gif</span> and <span class="inline-markup">dark.gif</span>.</p>
 <p>Save these images to your images folder:</p>
 <p><img src="images/light.gif"> <img src="images/dark.gif"></p>
-<p>If you choose to use your own images, remember to replace <span class="inline-markup">https://create.david.qa/images/light.gif</span> with the URL location of your version.</p>
+<p>If you choose to use your own images, remember to replace <span class="inline-markup">https://create.dvdv.kim/images/light.gif</span> with the URL location of your version.</p>
 
 <b>Toggle Button CSS</b> (add to your stylesheet file): <br>
 <span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">/*  Light/Dark theme toggle
@@ -104,13 +104,13 @@ cursor: pointer;
     }
 
 .dark-mode #theme-toggle {
-content: url('https://create.david.qa/images/dark.gif'); 
+content: url('https://create.dvdv.kim/images/dark.gif'); 
     }
 </textarea></span>
 
 <h3>What's happening here?</h3>
 <p>You're positioning the button to go in the top right corner of your page and giving it the class we'll use to swap its image when clicked.</p>
-<p>Remember to replace <span class="inline-markup">https://create.david.qa/images/dark.gif</span> with the URL location of your versions of the images!</p>
+<p>Remember to replace <span class="inline-markup">https://create.dvdv.kim/images/dark.gif</span> with the URL location of your versions of the images!</p>
 <b>Dark Theme Styles CSS</b> (add to your stylesheet file): <br>
 <span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">
   /* Dark theme styles */
@@ -157,7 +157,7 @@ background-image: var(--header-image-dark);
   and then create a <span class="inline-markup">.dark-mode</span> variant of it and change the color or background-color value to something else.
 </p>
 <b>Toggle function JavaScript</b> (create or add to a .js file): <br>
-<span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">// Dark/Light Mode Theme Toggle from create.david.qa 
+<span class="full-width-code"><textarea readonly="" cols="150" rows="6" onclick="this.setSelectionRange(0, this.value.length)">// Dark/Light Mode Theme Toggle from create.dvdv.kim 
   document.addEventListener('DOMContentLoaded', function() {
       // Get system preference
       const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -190,7 +190,7 @@ background-image: var(--header-image-dark);
           }
   
           // Update image
-          const imgSrc = isDark ? 'https://create.david.qa/images/dark.gif' : 'https://create.david.qa/images/light.gif';
+          const imgSrc = isDark ? 'https://create.dvdv.kim/images/dark.gif' : 'https://create.dvdv.kim/images/light.gif';
           console.log(`Image source: ${imgSrc}`);
           toggle.src = imgSrc;
       }
@@ -224,7 +224,7 @@ background-image: var(--header-image-dark);
 <p><b>Lots!</b> First, this checks the user's system preference for dark or light theme (if any), stores that preference, and then displays it first. 
 This only gets overridden if the user clicks the toggle, which then persists throughout the session across whatever other pages have this JavaScript running.
 Each time a page is loaded, it will check the storage if there's an existing preference set, and then display that version.</p>
-<p>Remember to replace <span class="inline-markup">https://create.david.qa/images/dark.gif</span> and <span class="inline-markup">https://create.david.qa/images/light.gif</span> with the URL location of your versions of the images!</p>
+<p>Remember to replace <span class="inline-markup">https://create.dvdv.kim/images/dark.gif</span> and <span class="inline-markup">https://create.dvdv.kim/images/light.gif</span> with the URL location of your versions of the images!</p>
 <p>This JS will even store a log of which theme you're in, so you can view it in your browser's developer tools (under the "Console" tab).</p>
 <p>As a bonus, you can add <span class="inline-markup">&lt;meta name="darkreader-lock"&gt;</span> to the head of your page to disable the Dark Reader extension.</p>
 <hr>

@@ -1,5 +1,5 @@
-const darkFavicon = 'https://create.david.qa/images/icon-moon.gif';
-const lightFavicon = 'https://create.david.qa/images/icon-sun.gif';
+const darkFavicon = 'https://create.dvdv.kim/images/icon-moon.gif';
+const lightFavicon = 'https://create.dvdv.kim/images/icon-sun.gif';
 
 const favicon = document.querySelector('link[rel="icon"]');
 
